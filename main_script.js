@@ -31,7 +31,7 @@ function loadProperties(language) {
     .then((res) => res.text()) // Fetch the properties file as text
     .then((text) => {
       const properties = parseProperties(text); // Parse the properties
-      updateUI(properties); // Update the UI elements
+      updateUI(properties); // Update the UI elements with the properties
     })
     .catch((err) => {
       console.error(`Error loading ${propertiesFile}:`, err);
@@ -57,13 +57,19 @@ function parseProperties(propertiesText) {
 
 // Function to update UI elements with the properties
 function updateUI(properties) {
-  // Update the "More Info" button text
+  // Update the "Go to Schedule" button text from the properties file
+  const goToScheduleButton = document.getElementById("toSchedule");
+  if (properties["go_to_schedule_button"]) {
+    goToScheduleButton.textContent = properties["go_to_schedule_button"];
+  }
+
+  // Update "Show More" and "Show Less" buttons from the properties file
   const buttons = document.querySelectorAll(".more-info-button");
   buttons.forEach((button) => {
-    if (button.textContent === "More Info") {
-      button.textContent = properties["more_info_button"];
-    } else if (button.textContent === "Less Info") {
-      button.textContent = properties["less_info_button"];
+    if (button.textContent === "Show More") {
+      button.textContent = properties["show_more_button"]; // "Show More" text from the properties file
+    } else if (button.textContent === "Show Less") {
+      button.textContent = properties["show_less_button"]; // "Show Less" text from the properties file
     }
   });
 }
@@ -123,15 +129,15 @@ function renderSections(data) {
       // Add a toggle button to show/hide the content
       const toggleButton = document.createElement("button");
       toggleButton.classList.add("more-info-button");
-      toggleButton.textContent = `More Info`;
+      toggleButton.textContent = "More Info"; // Initially set to "More Info"
 
       // Toggle button behavior
       toggleButton.onclick = () => {
         hiddenContent.classList.toggle("hidden");
         if (hiddenContent.classList.contains("hidden")) {
-          toggleButton.textContent = `More Info`;
+          toggleButton.textContent = "More Info"; // Text from the properties file
         } else {
-          toggleButton.textContent = `Less Info`;
+          toggleButton.textContent = "Less Info"; // Text from the properties file
         }
       };
 
@@ -145,7 +151,7 @@ function renderSections(data) {
       sectionData.links.forEach((link) => {
         const button = document.createElement("button");
         button.classList.add("more-info-button");
-        button.textContent = link.text; // Button text will be the link text
+        button.textContent = link.text; // Button text will be the link text from the JSON
 
         // When the button is clicked, open the URL
         button.onclick = () => {
