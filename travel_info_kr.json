@@ -9,7 +9,10 @@
       { "label": "체크아웃", "value": "12:00 PM" },
       { "label": "연락처", "value": "(123) 456-7890" }
     ],
-    "links": [{ "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }]
+    "links": [
+      { "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
+      { "text": "호텔 예약 서류", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }
+    ]
   },
   "emergency_contacts": {
     "title": "비상 연락처",
