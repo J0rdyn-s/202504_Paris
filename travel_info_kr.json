@@ -7,7 +7,7 @@
       { "label": "주소", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
       { "label": "체크인", "value": "오후 2:00" },
       { "label": "체크아웃", "value": "오전 11:00" },
-      { "label": "연락처", "value": "(123) 456-7890" }
+      { "label": "연락처", "value": "01 86 65 59 60" }
     ],
     "links": [
       { "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
@@ -75,11 +75,18 @@
     "title": "💬 기초 회화",
     "hidden": true,
     "content": [
-      { "phrase": "Hello", "translation": "Hola (Spanish)" },
-      { "phrase": "Good Morning", "translation": "Guten Morgen (German)" },
-      { "phrase": "Thank You", "translation": "Merci (French)" },
-      { "phrase": "How much is this?", "translation": "Quanto costa? (Italian)" },
-      { "phrase": "Where is the bathroom?", "translation": "Où sont les toilettes ? (French)" }
+      { "phrase": "안녕하세요", "translation": "Bonjour" },
+      { "phrase": "감사합니다", "translation": "Merci" },
+      { "phrase": "실례합니다", "translation": "Excusez-moi" },
+      { "phrase": "화장실이 어디예요?", "translation": "Où sont les toilettes ?" },
+      { "phrase": "이거 얼마예요?", "translation": "C’est combien ?" },
+      { "phrase": "영어 하세요?", "translation": "Parlez-vous anglais ?" },
+      { "phrase": "도와주세요", "translation": "Aidez-moi, s’il vous plaît" },
+      { "phrase": "길을 잃었어요", "translation": "Je suis perdu(e)" },
+      { "phrase": "예약했어요", "translation": "J’ai une réservation" },
+      { "phrase": "메뉴 좀 볼 수 있을까요?", "translation": "Puis-je voir le menu, s’il vous plaît ?" },
+      { "phrase": "계산서 주세요", "translation": "L’addition, s’il vous plaît" },
+      { "phrase": "병원에 가고 싶어요", "translation": "Je voudrais aller à l’hôpital" }
     ],
     "links": null
   }

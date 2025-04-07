@@ -1,71 +1,92 @@
 {
   "hotel_info": {
-    "title": "Hotel Information",
+    "title": "🛏️ Hotel Information",
     "hidden": false,
     "content": [
       { "label": "Hotel Name", "value": "citizenM Paris La Défense" },
       { "label": "Address", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
-      { "label": "Check-in", "value": "3:00 PM" },
-      { "label": "Check-out", "value": "12:00 PM" },
-      { "label": "Phone Number", "value": "(123) 456-7890" }
+      { "label": "Check-in", "value": "2:00 PM" },
+      { "label": "Check-out", "value": "11:00 AM" },
+      { "label": "Contact", "value": "01 86 65 59 60" }
     ],
-    "links": null
+    "links": [
+      { "text": "Map", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
+      { "text": "Hotel Booking Document", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }
+    ]
   },
   "flight_departure": {
-    "title": "Departure Flight",
+    "title": "🛫 Departure Flight",
     "hidden": false,
     "content": [
-      { "label": "Flight", "value": "OZ501 (Asisna Airlines)" },
+      { "label": "Flight", "value": "OZ501 (Asiana Airlines)" },
+      { "label": "Booking Reference", "value": "5OD3MA(48708426)" },
       { "label": "From", "value": "Incheon International Airport (ICN)" },
       { "label": "To", "value": "Paris Charles de Gaulle Airport (CDG)" },
-      { "label": "Departure Time", "value": "2025-04-10 13:10" },
-      { "label": "Arrival Time", "value": "2025-04-10 18:50" }
+      { "label": "Departure Time", "value": "2025-04-12 (Sat) 10:45 AM" },
+      { "label": "Arrival Time", "value": "2025-04-12 (Sat) 6:05 PM" },
+      { "label": "Flight Duration", "value": "14h 20m" },
+      { "label": "Seat", "value": "14h 20m" }
     ],
-    "links": [{ "text": "Airline Website", "url": "https://www.airfrance.com/" }]
+    "links": [{ "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ501" }]
   },
   "flight_return": {
-    "title": "Return Flight",
+    "title": "🛬 Return Flight",
     "hidden": false,
     "content": [
-      { "label": "Flight", "value": "AF264 (Air France)" },
+      { "label": "Flight", "value": "OZ502 (Asiana Airlines)" },
+      { "label": "Booking Reference", "value": "5OD3MA(48708426)" },
       { "label": "From", "value": "Paris Charles de Gaulle Airport (CDG)" },
       { "label": "To", "value": "Incheon International Airport (ICN)" },
-      { "label": "Departure Time", "value": "2025-04-24 21:30" },
-      { "label": "Arrival Time", "value": "2025-04-25 16:10" }
+      { "label": "Departure Time", "value": "2025-04-20 (Sun) 8:05 PM" },
+      { "label": "Arrival Time", "value": "2025-04-21 (Mon) 3:05 PM" },
+      { "label": "Flight Duration", "value": "12h" },
+      { "label": "Seat", "value": "12h" }
     ],
-    "links": [{ "text": "View Booking", "url": "https://www.airfrance.com/booking/view" }]
+    "links": [{ "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ502" }]
   },
   "emergency_contacts": {
-    "title": "Emergency Contacts",
+    "title": "🚨 Emergency Contacts",
     "hidden": false,
     "content": [
-      { "label": "Police", "value": "911" },
-      { "label": "Fire Department", "value": "911" },
-      { "label": "Ambulance", "value": "911" },
-      { "label": "Embassy", "value": "1-800-123-4567" }
+      { "label": "Police", "value": "17" },
+      { "label": "Fire Department", "value": "18" },
+      { "label": "Medical Emergency", "value": "15" },
+      { "label": "Embassy of South Korea in France", "value": "01-4069-0012, 0015" }
     ],
-    "links": [{ "text": "Emergency Contacts Details", "url": "emergencyContacts.html" }]
+    "links": [
+      {
+        "text": "Embassy Website",
+        "url": "https://overseas.mofa.go.kr/fr-ko/wpge/m_9421/contents.do"
+      }
+    ]
   },
   "insurance_info": {
-    "title": "Insurance Information",
-    "hidden": true,
+    "title": "💊 Travel Insurance Info",
+    "hidden": false,
     "content": [
-      { "label": "Provider", "value": "Example Insurance Co." },
-      { "label": "Policy Number", "value": "ABC123456789" },
-      { "label": "Contact Number", "value": "1-800-123-4567" },
-      { "label": "Emergency Assistance", "value": "1-800-555-1234" }
+      { "label": "Insurer", "value": "Carrot Insurance X MyBank" },
+      { "label": "Policy Number", "value": "FAC0244404688000" },
+      { "label": "Customer Service", "value": "contact@mibankins.com or 02‐6925‐1517" },
+      { "label": "24-Hour Emergency Contact (Abroad)", "value": "82‐2‐360‐2541" }
     ],
-    "links": [{ "text": "Insurance Details", "url": "insuranceDetails.html" }]
+    "links": [{ "text": "Travel Insurance Certificate", "url": "additionals/insurance.pdf" }]
   },
   "basic_phrases": {
-    "title": "Basic Phrases",
+    "title": "💬 Basic Phrases",
     "hidden": true,
     "content": [
-      { "phrase": "Hello", "translation": "Hola (Spanish)" },
-      { "phrase": "Good Morning", "translation": "Guten Morgen (German)" },
-      { "phrase": "Thank You", "translation": "Merci (French)" },
-      { "phrase": "How much is this?", "translation": "Quanto costa? (Italian)" },
-      { "phrase": "Where is the bathroom?", "translation": "Où sont les toilettes ? (French)" }
+      { "phrase": "Hello", "translation": "Bonjour" },
+      { "phrase": "Thank you", "translation": "Merci" },
+      { "phrase": "Excuse me", "translation": "Excusez-moi" },
+      { "phrase": "Where is the bathroom?", "translation": "Où sont les toilettes ?" },
+      { "phrase": "How much is this?", "translation": "C’est combien ?" },
+      { "phrase": "Do you speak English?", "translation": "Parlez-vous anglais ?" },
+      { "phrase": "Please help me", "translation": "Aidez-moi, s’il vous plaît" },
+      { "phrase": "I’m lost", "translation": "Je suis perdu(e)" },
+      { "phrase": "I have a reservation", "translation": "J’ai une réservation" },
+      { "phrase": "Can I see the menu, please?", "translation": "Puis-je voir le menu, s’il vous plaît ?" },
+      { "phrase": "The check, please", "translation": "L’addition, s’il vous plaît" },
+      { "phrase": "I need to go to the hospital", "translation": "Je voudrais aller à l’hôpital" }
     ],
     "links": null
   }
