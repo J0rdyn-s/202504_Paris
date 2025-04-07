@@ -1,29 +1,34 @@
 {
   "hotel_info": {
-    "title": "Hotel Information",
+    "title": "호텔 정보",
     "hidden": false,
     "content": [
-      { "label": "Hotel Name", "value": "Example Hotel" },
-      { "label": "Address", "value": "123 Main St, City, Country" },
-      { "label": "Check-in", "value": "3:00 PM" },
-      { "label": "Check-out", "value": "12:00 PM" },
-      { "label": "Phone Number", "value": "(123) 456-7890" }
+      { "label": "호텔명", "value": "시티즌M 파리 라 데팡스" },
+      { "label": "주소", "value": "123 Main St, City, Country" },
+      { "label": "체크인", "value": "3:00 PM" },
+      { "label": "체크아웃", "value": "12:00 PM" },
+      { "label": "연락처", "value": "(123) 456-7890" }
     ],
-    "links": [{ "text": "Hotel Details", "url": "hotelDetails.html" }]
+    "links": [{ "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }]
   },
   "emergency_contacts": {
-    "title": "Emergency Contacts",
+    "title": "비상 연락처",
     "hidden": false,
     "content": [
-      { "label": "Police", "value": "911" },
-      { "label": "Fire Department", "value": "911" },
-      { "label": "Ambulance", "value": "911" },
-      { "label": "Embassy", "value": "1-800-123-4567" }
+      { "label": "경찰서", "value": "17" },
+      { "label": "소방서", "value": "18" },
+      { "label": "긴급의료", "value": "15" },
+      { "label": "주 프랑스 대한민국 대사관", "value": "01-4069-0012, 0015" }
     ],
-    "links": [{ "text": "Emergency Contacts Details", "url": "emergencyContacts.html" }]
+    "links": [
+      {
+        "text": "주 프랑스 대한민국 대사관 홈페이지",
+        "url": "https://overseas.mofa.go.kr/fr-ko/wpge/m_9421/contents.do"
+      }
+    ]
   },
   "insurance_info": {
-    "title": "Insurance Information",
+    "title": "보험 가임 내역서",
     "hidden": true,
     "content": [
       { "label": "Provider", "value": "Example Insurance Co." },
@@ -34,7 +39,7 @@
     "links": [{ "text": "Insurance Details", "url": "insuranceDetails.html" }]
   },
   "basic_phrases": {
-    "title": "Basic Phrases",
+    "title": "기초 회화",
     "hidden": true,
     "content": [
       { "phrase": "Hello", "translation": "Hola (Spanish)" },

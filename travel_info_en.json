@@ -9,7 +9,7 @@
       { "label": "Check-out", "value": "12:00 PM" },
       { "label": "Phone Number", "value": "(123) 456-7890" }
     ],
-    "links": [{ "text": "Hotel Details", "url": "hotelDetails.html" }]
+    "links": null
   },
   "emergency_contacts": {
     "title": "Emergency Contacts",
