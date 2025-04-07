@@ -67,6 +67,36 @@ body {
   color: #333;
 }
 
+/* Go to Schedule Button Styling */
+.to-schedule {
+  margin-top: 20px;
+  text-align: center; /* Center align the button */
+}
+
+.to-schedule-button {
+  cursor: pointer;
+  background-color: #007bff; /* Blue color for the button */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  display: block; /* Make the button a block-level element */
+  width: 100%; /* Make the button take up the full width of the container */
+  text-transform: uppercase; /* Optional: Makes the text uppercase */
+  margin: 0 auto; /* Ensures the button is centered within its container */
+  margin-bottom: 20px; /* Adds space below the button */
+}
+
+.to-schedule-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.to-schedule-button:focus {
+  outline: none; /* Removes focus outline */
+}
+
 /* Content List */
 .section ul {
   list-style-type: none;

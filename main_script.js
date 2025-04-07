@@ -85,3 +85,8 @@ fetch("travel_info.json")
   .catch((err) => {
     console.error("Error loading the JSON data:", err);
   });
+
+// Schedule button event
+document.getElementById("toSchedule").addEventListener("click", function () {
+  window.location.href = "index.html"; // Navigate to the schedule page
+});
