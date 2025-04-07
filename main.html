@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Information</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to your shared CSS -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        padding: 20px;
+        background-color: #f4f4f4;
+        margin: 0;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2.5em;
+      }
+
+      .section {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: transparent;
+      }
+
+      .section h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      .section ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .section ul li {
+        margin: 8px 0;
+        font-size: 1.1em;
+      }
+
+      .section ul li strong {
+        color: #007bff;
+      }
+
+      .toggle {
+        cursor: pointer;
+        color: #007bff;
+        font-size: 1.2em;
+        text-decoration: underline;
+        margin-top: 10px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .links {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .links a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+        margin: 0 10px;
+      }
+
+      .links a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Travel Information</h1>
+
+    <!-- Hotel Information Section -->
+    <div class="section" id="hotelInfo">
+      <h2>Hotel Information</h2>
+      <p>Click below to view your hotel details:</p>
+      <div class="toggle" onclick="toggleSection('hotelDetails')">Show Hotel Info</div>
+      <div class="hidden" id="hotelDetails">
+        <ul>
+          <li><strong>Hotel Name:</strong> Example Hotel</li>
+          <li><strong>Address:</strong> 123 Main St, City, Country</li>
+          <li><strong>Check-in:</strong> 3:00 PM</li>
+          <li><strong>Check-out:</strong> 12:00 PM</li>
+          <li><strong>Phone Number:</strong> (123) 456-7890</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Insurance Information Section -->
+    <div class="section" id="insuranceInfo">
+      <h2>Insurance Information</h2>
+      <p>Click below to view your insurance details:</p>
+      <div class="toggle" onclick="toggleSection('insuranceDetails')">Show Insurance Info</div>
+      <div class="hidden" id="insuranceDetails">
+        <ul>
+          <li><strong>Provider:</strong> Example Insurance Co.</li>
+          <li><strong>Policy Number:</strong> ABC123456789</li>
+          <li><strong>Contact Number:</strong> 1-800-123-4567</li>
+          <li><strong>Emergency Assistance:</strong> 1-800-555-1234</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Emergency Contact Section -->
+    <div class="section" id="emergencyContacts">
+      <h2>Emergency Contacts</h2>
+      <p>Click below to view emergency contact numbers:</p>
+      <div class="toggle" onclick="toggleSection('emergencyDetails')">Show Emergency Contacts</div>
+      <div class="hidden" id="emergencyDetails">
+        <ul>
+          <li><strong>Police:</strong> 911</li>
+          <li><strong>Fire Department:</strong> 911</li>
+          <li><strong>Ambulance:</strong> 911</li>
+          <li><strong>Embassy:</strong> 1-800-123-4567</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Basic Phrases Section -->
+    <div class="section" id="basicPhrases">
+      <h2>Basic Phrases</h2>
+      <p>Click below to view basic communication phrases:</p>
+      <div class="toggle" onclick="toggleSection('phraseDetails')">Show Basic Phrases</div>
+      <div class="hidden" id="phraseDetails">
+        <ul>
+          <li><strong>Hello:</strong> Hola (Spanish)</li>
+          <li><strong>Good Morning:</strong> Guten Morgen (German)</li>
+          <li><strong>Thank You:</strong> Merci (French)</li>
+          <li><strong>How much is this?</strong> Quanto costa? (Italian)</li>
+          <li><strong>Where is the bathroom?</strong> Où sont les toilettes ? (French)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Links to other pages -->
+    <div class="links">
+      <h3>For more information:</h3>
+      <a href="hotelDetails.html">Hotel Details</a>
+      <a href="localAttractions.html">Local Attractions</a>
+      <a href="restaurantList.html">Restaurant List</a>
+    </div>
+
+    <script>
+      // Function to toggle sections open/closed
+      function toggleSection(id) {
+        const section = document.getElementById(id);
+        section.classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>

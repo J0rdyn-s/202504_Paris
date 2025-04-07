@@ -1,38 +1,122 @@
 ﻿[
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    },
-    {
-        "type":  "info",
-        "start":  "1000",
-        "end":  "1030",
-        "event_kr":  "🚶 다음 장소로 이동",
-        "note_kr":  "15분 예상",
-        "event_en":  "Walk to the next place",
-        "note_en":  "Estimated 15 minutes",
-        "ticket":  null,
-        "map":  "https://maps.google.com",
-        "more":  null
-    },
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    }
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "Chez Alain Miam Miam",
+    "note_kr": "아침 식사: 샌드위치 / 9시 오픈",
+    "event_en": "Chez Alain Miam Miam",
+    "note_en": "Breakfast",
+    "ticket": null,
+    "map": "https://g.co/kgs/hGNfPwB",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1000",
+    "end": "1030",
+    "event_kr": "마레 지구 관광",
+    "note_kr": null,
+    "event_en": "Marais District",
+    "note_en": null,
+    "ticket": null,
+    "map": "https://maps.google.com",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "앙팡 루즈 시장 관광",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "Place de la Bastille",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "le baron rouge",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "앙팡 루즈 시장 관광",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "pierre herme paris",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "carrefour",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1000",
+    "event_kr": "gallery lafayette",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": "https://example.com/more-info"
+  },
+  {
+    "type": "schedule",
+    "start": "1915",
+    "end": "2115",
+    "event_kr": "Chez André",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": "https://g.co/kgs/PVLaj75",
+    "more": null
+  }
 ]
