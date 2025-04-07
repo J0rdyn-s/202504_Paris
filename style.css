@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fa;
@@ -12,10 +18,11 @@ body {
   align-items: center;
   background-color: #ffffff;
   padding: 12px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 30;
+  margin-bottom: 0;
 }
 
 .top-bar .title {
@@ -51,12 +58,13 @@ body {
 .tabs {
   display: flex;
   overflow-x: auto;
-  background-color: #ffffff;
-  padding: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff !important;
+  padding: 14px 8px 8px;
   position: sticky;
   top: 56px;
   z-index: 10;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .tab {
@@ -82,12 +90,13 @@ body {
 
 .mobile-date-toggle {
   display: none;
-  padding: 12px 16px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff !important;
+  padding: 14px 16px 12px;
   position: sticky;
   top: 56px;
   z-index: 15;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 #currentDateBtn {
@@ -209,7 +218,6 @@ body {
 
 .schedule-item.info {
   background-color: #f7f7f7;
-  border-left: 4px solid #cbd5e0;
 }
 
 .schedule-item.info .event-title {
@@ -220,13 +228,17 @@ body {
   color: #718096;
 }
 
-/* Footer */
 .meta-info {
   text-align: center;
   font-size: 13px;
   color: #718096;
   margin: 40px 0 20px;
   line-height: 1.6;
+}
+
+.tabs,
+.mobile-date-toggle {
+  margin-top: -1px;
 }
 
 @media (max-width: 768px) {
