@@ -64,9 +64,17 @@ function selectDateByOffset(offset) {
   const nextIndex = Math.min(dates.length - 1, Math.max(0, index + offset));
   const newDate = dates[nextIndex];
   if (newDate !== currentDate) {
-    loadSchedule(newDate);
-    updateDateDisplay(newDate);
+    currentDate = newDate;
+    loadSchedule(currentDate);
+    updateDateDisplay(currentDate);
+    updateNavButtons();
   }
+}
+
+function updateNavButtons() {
+  const index = dates.indexOf(currentDate);
+  document.getElementById("prevDate").disabled = index === 0;
+  document.getElementById("nextDate").disabled = index === dates.length - 1;
 }
 
 function loadSchedule(date) {
@@ -145,6 +153,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerText = document.getElementById("footerText");
   const languageSelect = document.getElementById("languageSelect");
 
+  document.getElementById("prevDate").addEventListener("click", () => {
+    selectDateByOffset(-1);
+  });
+
+  document.getElementById("nextDate").addEventListener("click", () => {
+    selectDateByOffset(1);
+  });
+
   // Ensure the date list is hidden initially
   mobileList.style.display = "none";
 
@@ -178,6 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // ✅ Load the first date by default
         loadSchedule(dates[0]);
         updateDateDisplay(dates[0]);
+        currentDate = dates[0]; // <— Add this line if it's missing
+        updateNavButtons();
       } catch (e) {
         console.error("🚨 Error processing site meta:", e);
       }
