@@ -52,7 +52,10 @@ function updateDateDisplay(date) {
   };
   const weekday = weekdays[currentLanguage][weekdayIndex];
   const dayOffset = index + (siteMeta.start_day || 0);
-  const label = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차` : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
+  const label =
+    currentLanguage === "kr"
+      ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차`
+      : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
   el.textContent = `📅 ${label} ▾`;
 }
 
@@ -140,12 +143,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteTitle = document.getElementById("siteTitle");
   const authorLine = document.getElementById("authorLine");
   const footerText = document.getElementById("footerText");
+  const languageSelect = document.getElementById("languageSelect");
 
-  let dates = [];
-  let startDay = 0;
-  let currentLanguage = "kr";
-
-  // Ensure the date list is hidden initially (using display: none)
+  // Ensure the date list is hidden initially
   mobileList.style.display = "none";
 
   // Fetch and process the page meta data
@@ -153,38 +153,31 @@ document.addEventListener("DOMContentLoaded", () => {
     .then((res) => res.json())
     .then((data) => {
       try {
+        siteMeta = data;
         startDay = data.start_day || 0;
         currentLanguage = data.default_language || "kr";
 
-        siteTitle.textContent = data[`title_${currentLanguage}`];
-        authorLine.textContent = data.author ? `👤 ${data.author}` : "";
-        footerText.textContent = data[`footer_${currentLanguage}`] || "";
+        // ✅ Sync language dropdown
+        languageSelect.value = currentLanguage;
 
-        // Generate the dates based on start and end date
+        // ✅ Set title, author, and footer
+        siteTitle.textContent = siteMeta[`title_${currentLanguage}`];
+        authorLine.textContent = siteMeta.author ? `👤 ${siteMeta.author}` : "";
+        footerText.textContent = siteMeta[`footer_${currentLanguage}`] || "";
+
+        // ✅ Generate dates
         dates = generateDates(data.start_date, data.end_date);
         if (!Array.isArray(dates) || dates.length === 0) {
           console.error("⚠️ No dates generated. Check start_date/end_date in page_meta.json.");
           return;
         }
 
-        // Build the date list, but keep it hidden initially
-        mobileList.innerHTML = ""; // Clear any previous content
-        dates.forEach((date, index) => {
-          const li = document.createElement("li");
-          const dayLabel = currentLanguage === "kr" ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차` : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
+        // ✅ Build date list
+        buildDateList();
 
-          li.textContent = dayLabel;
-          li.onclick = () => {
-            // Update the displayed date
-            dateDisplay.textContent = dayLabel;
-            // Hide the date list after selection (using display: none)
-            mobileList.style.display = "none";
-            // Optionally, load the schedule or update other content here
-            loadSchedule(date);
-            updateDateDisplay(date);
-          };
-          mobileList.appendChild(li); // Add the date to the list
-        });
+        // ✅ Load the first date by default
+        loadSchedule(dates[0]);
+        updateDateDisplay(dates[0]);
       } catch (e) {
         console.error("🚨 Error processing site meta:", e);
       }
@@ -193,14 +186,52 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("🚨 Failed to fetch page_meta.json:", err);
     });
 
-  // Simple fallback for generateDates if missing
+  // ✅ Toggle date list visibility
+  dateDisplay.addEventListener("click", () => {
+    mobileList.style.display = mobileList.style.display === "none" ? "block" : "none";
+  });
+
+  // ✅ Language selector event
+  languageSelect.addEventListener("change", (e) => {
+    currentLanguage = e.target.value;
+
+    // Update title, footer, and author
+    siteTitle.textContent = siteMeta[`title_${currentLanguage}`] || "";
+    footerText.textContent = siteMeta[`footer_${currentLanguage}`] || "";
+
+    // Update date label and rebuild mobile list
+    if (currentDate) {
+      updateDateDisplay(currentDate);
+      loadSchedule(currentDate);
+    }
+
+    buildDateList();
+  });
+
+  // ✅ Reusable date list builder
+  function buildDateList() {
+    mobileList.innerHTML = "";
+    dates.forEach((date, index) => {
+      const li = document.createElement("li");
+      const dayLabel =
+        currentLanguage === "kr"
+          ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차`
+          : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
+      li.textContent = dayLabel;
+      li.onclick = () => {
+        mobileList.style.display = "none";
+        loadSchedule(date);
+        updateDateDisplay(date);
+      };
+      mobileList.appendChild(li);
+    });
+  }
+
+  // ✅ Local fallback for generateDates if needed
   function generateDates(start, end) {
     if (!start || !end) return [];
-
-    // Convert YYYY-MM-DD to YYYYMMDD
     const startDate = new Date(start.replace(/-/g, "/"));
     const endDate = new Date(end.replace(/-/g, "/"));
-
     const result = [];
     while (startDate <= endDate) {
       const y = startDate.getFullYear();
@@ -211,13 +242,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     return result;
   }
-
-  // Toggle the visibility of the date list when clicking dateDisplay
-  dateDisplay.addEventListener("click", () => {
-    if (mobileList.style.display === "none") {
-      mobileList.style.display = "block"; // Show the list
-    } else {
-      mobileList.style.display = "none"; // Hide the list
-    }
-  });
 });

@@ -27,7 +27,10 @@
       { "label": "비행 시간", "value": "14시간 20분" },
       { "label": "좌석", "value": "14시간 20분" }
     ],
-    "links": [{ "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ501" }]
+    "links": [
+      { "text": "E-티켓", "url": "https://ko.flightaware.com/live/flight/OZ501" },
+      { "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ501" }
+    ]
   },
   "flight_return": {
     "title": "🛬 귀국 항공",
@@ -42,7 +45,10 @@
       { "label": "비행 시간", "value": "12시간" },
       { "label": "좌석", "value": "12시간" }
     ],
-    "links": [{ "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ502" }]
+    "links": [
+      { "text": "E-티켓", "url": "https://ko.flightaware.com/live/flight/OZ501" },
+      { "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ502" }
+    ]
   },
   "emergency_contacts": {
     "title": "🚨 비상 연락처",
