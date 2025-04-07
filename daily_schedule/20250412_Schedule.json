@@ -1,10 +1,10 @@
-﻿[
+[
   {
     "type": "schedule",
     "start": "1045",
     "end": "1805",
     "event_kr": "✈️ 인천 공항 T1 → 샤를 드 골 공항 T1",
-    "note_kr": "비행시간: 14시간 20분 / 아시아나항공 OZ501",
+    "note_kr": "비행시간: 14시간 20분</br>아시아나항공 OZ501",
     "event_en": "Sample event",
     "note_en": "Write your note here",
     "ticket": null,
