@@ -1,12 +1,12 @@
 {
   "hotel_info": {
-    "title": "호텔 정보",
+    "title": "🛏️ 호텔 정보",
     "hidden": false,
     "content": [
       { "label": "호텔명", "value": "시티즌M 파리 라 데팡스" },
       { "label": "주소", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
-      { "label": "체크인", "value": "3:00 PM" },
-      { "label": "체크아웃", "value": "12:00 PM" },
+      { "label": "체크인", "value": "오후 2:00" },
+      { "label": "체크아웃", "value": "오전 11:00" },
       { "label": "연락처", "value": "(123) 456-7890" }
     ],
     "links": [
@@ -14,8 +14,38 @@
       { "text": "호텔 예약 서류", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }
     ]
   },
+  "flight_departure": {
+    "title": "🛫 출국 항공",
+    "hidden": false,
+    "content": [
+      { "label": "항공편", "value": "OZ501 (아시아나 항공)" },
+      { "label": "예약번호", "value": "5OD3MA(48708426)" },
+      { "label": "출발지", "value": "인천국제공항 (ICN)" },
+      { "label": "도착지", "value": "파리 샤를드골 공항 (CDG)" },
+      { "label": "출발 시간", "value": "2025-04-12 (토) 오전 10:45" },
+      { "label": "도착 시간", "value": "2025-04-12 (토) 오후 18:05" },
+      { "label": "비행 시간", "value": "14시간 20분" },
+      { "label": "좌석", "value": "14시간 20분" }
+    ],
+    "links": [{ "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ501" }]
+  },
+  "flight_return": {
+    "title": "🛬 귀국 항공",
+    "hidden": false,
+    "content": [
+      { "label": "항공편", "value": "OZ502 (아시아나 항공)" },
+      { "label": "예약번호", "value": "5OD3MA(48708426)" },
+      { "label": "출발지", "value": "파리 샤를드골 공항 (CDG)" },
+      { "label": "도착지", "value": "인천국제공항 (ICN)" },
+      { "label": "출발 시간", "value": "2025-04-20 (일) 오후 20:05" },
+      { "label": "도착 시간", "value": "2025-04-20 (일) 오후 15:05" },
+      { "label": "비행 시간", "value": "12시간" },
+      { "label": "좌석", "value": "12시간" }
+    ],
+    "links": [{ "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ502" }]
+  },
   "emergency_contacts": {
-    "title": "비상 연락처",
+    "title": "🚨 비상 연락처",
     "hidden": false,
     "content": [
       { "label": "경찰서", "value": "17" },
@@ -31,7 +61,7 @@
     ]
   },
   "insurance_info": {
-    "title": "보험 가입 내역서",
+    "title": "💊 보험 가입 내역서",
     "hidden": false,
     "content": [
       { "label": "보험사", "value": "캐롯손해보험 X 마이뱅크" },
@@ -42,7 +72,7 @@
     "links": [{ "text": "해외여행자보험 가입증명서", "url": "additionals/insurance.pdf" }]
   },
   "basic_phrases": {
-    "title": "기초 회화",
+    "title": "💬 기초 회화",
     "hidden": true,
     "content": [
       { "phrase": "Hello", "translation": "Hola (Spanish)" },

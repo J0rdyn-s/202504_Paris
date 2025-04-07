@@ -11,6 +11,30 @@
     ],
     "links": null
   },
+  "flight_departure": {
+    "title": "Departure Flight",
+    "hidden": false,
+    "content": [
+      { "label": "Flight", "value": "OZ501 (Asisna Airlines)" },
+      { "label": "From", "value": "Incheon International Airport (ICN)" },
+      { "label": "To", "value": "Paris Charles de Gaulle Airport (CDG)" },
+      { "label": "Departure Time", "value": "2025-04-10 13:10" },
+      { "label": "Arrival Time", "value": "2025-04-10 18:50" }
+    ],
+    "links": [{ "text": "Airline Website", "url": "https://www.airfrance.com/" }]
+  },
+  "flight_return": {
+    "title": "Return Flight",
+    "hidden": false,
+    "content": [
+      { "label": "Flight", "value": "AF264 (Air France)" },
+      { "label": "From", "value": "Paris Charles de Gaulle Airport (CDG)" },
+      { "label": "To", "value": "Incheon International Airport (ICN)" },
+      { "label": "Departure Time", "value": "2025-04-24 21:30" },
+      { "label": "Arrival Time", "value": "2025-04-25 16:10" }
+    ],
+    "links": [{ "text": "View Booking", "url": "https://www.airfrance.com/booking/view" }]
+  },
   "emergency_contacts": {
     "title": "Emergency Contacts",
     "hidden": false,
