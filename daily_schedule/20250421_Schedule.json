@@ -1,0 +1,22 @@
+﻿[
+  {
+    "time": "08:00 AM",
+    "event": "Breakfast at hotel",
+    "ticket": null
+  },
+  {
+    "time": null,
+    "event": "Unscheduled event (between activities)",
+    "ticket": null
+  },
+  {
+    "time": "01:00 PM",
+    "event": "Lunch at restaurant",
+    "ticket": null
+  },
+  {
+    "time": "03:00 PM",
+    "event": "Afternoon activity",
+    "ticket": null
+  }
+]
