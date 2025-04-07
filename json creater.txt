@@ -1,0 +1,49 @@
+# Set the start and end dates
+$startDate = Get-Date "2025-04-11"
+$endDate = Get-Date "2025-04-21"
+
+# Sample event
+$scheduleItem = @{
+    type      = "schedule"
+    start     = "0900"
+    end       = "1000"
+    event_kr  = "예시 일정입니다"
+    note_kr   = "이곳에 한국어 메모를 작성하세요"
+    event_en  = "Sample event"
+    note_en   = "Write your note here"
+    ticket    = $null
+    map       = $null
+    more      = "https://example.com/more-info"
+}
+
+# Sample info block between events
+$infoItem = @{
+    type      = "info"
+    start     = "1000"
+    end       = "1030"
+    event_kr  = "🚶 다음 장소로 이동"
+    note_kr   = "15분 예상"
+    event_en  = "Walk to the next place"
+    note_en   = "Estimated 15 minutes"
+    ticket    = $null
+    map       = "https://maps.google.com"
+    more      = $null
+}
+
+# Generate a file for each date
+while ($startDate -le $endDate) {
+    $dateFormatted = $startDate.ToString("yyyyMMdd")
+    $filename = "${dateFormatted}_Schedule.json"
+
+    $schedule = @(
+        $scheduleItem
+        $infoItem
+        $scheduleItem
+    )
+
+    $schedule | ConvertTo-Json -Depth 4 | Out-File -Encoding UTF8 -FilePath $filename
+
+    Write-Host "Created $filename"
+
+    $startDate = $startDate.AddDays(1)
+}
