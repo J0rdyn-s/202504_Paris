@@ -2,8 +2,8 @@
 $startDate = Get-Date "2025-04-11"
 $endDate = Get-Date "2025-04-21"
 
-# Sample event
-$scheduleItem = @{
+# Sample event (ordered)
+$scheduleItem = [ordered]@{
     type      = "schedule"
     start     = "0900"
     end       = "1000"
@@ -16,8 +16,8 @@ $scheduleItem = @{
     more      = "https://example.com/more-info"
 }
 
-# Sample info block between events
-$infoItem = @{
+# Sample info block between events (ordered)
+$infoItem = [ordered]@{
     type      = "info"
     start     = "1000"
     end       = "1030"

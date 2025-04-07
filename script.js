@@ -1,187 +1,190 @@
-const startDate = new Date("2025-04-11");
-const endDate = new Date("2025-04-21");
-
-const dates = [];
-let current = new Date(startDate);
-while (current <= endDate) {
-  const yyyy = current.getFullYear();
-  const mm = String(current.getMonth() + 1).padStart(2, "0");
-  const dd = String(current.getDate()).padStart(2, "0");
-  dates.push(`${yyyy}${mm}${dd}`);
-  current.setDate(current.getDate() + 1);
-}
 
 let currentLanguage = "en";
 let currentDate = null;
+let dates = [];
+let siteMeta = {};
+let startDay = 0;
 
 const buttonLabels = {
   en: { ticket: "🎟️ Ticket", map: "🗺️ Map", more: "🔗 More Info" },
-  kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" },
+  kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" }
 };
+
+const startDate = new Date("2025-04-11");
+const endDate = new Date("2025-04-21");
+
+while (startDate <= endDate) {
+  const yyyy = startDate.getFullYear();
+  const mm = String(startDate.getMonth() + 1).padStart(2, '0');
+  const dd = String(startDate.getDate()).padStart(2, '0');
+  dates.push(`${yyyy}${mm}${dd}`);
+  startDate.setDate(startDate.getDate() + 1);
+}
 
 function formatTime(raw, lang) {
   if (!raw || raw.length !== 4) return null;
   const hours = parseInt(raw.substring(0, 2), 10);
   const minutes = parseInt(raw.substring(2), 10);
-  if (lang === "kr") {
+  if (lang === 'kr') {
     const isPM = hours >= 12;
     const h = hours % 12 || 12;
-    const period = isPM ? "오후" : "오전";
-    return `${period} ${h}시${minutes > 0 ? ` ${minutes}분` : ""}`;
+    const period = isPM ? '오후' : '오전';
+    return `${period} ${h}시${minutes > 0 ? ` ${minutes}분` : ''}`;
   } else {
     const h = hours % 12 || 12;
-    const period = hours >= 12 ? "PM" : "AM";
-    return `${h}:${minutes.toString().padStart(2, "0")} ${period}`;
+    const period = hours >= 12 ? 'PM' : 'AM';
+    return `${h}:${minutes.toString().padStart(2, '0')} ${period}`;
   }
 }
 
-function loadSiteInfo() {
-  fetch("page_meta.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const titleEl = document.getElementById("siteTitle");
-      titleEl.textContent = currentLanguage === "kr" ? data.title_kr : data.title_en;
-    });
+function updateDateDisplay(date) {
+  const el = document.getElementById("dateDisplay");
+  const index = dates.indexOf(date);
+  const dateStr = `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}`;
+  const dayOffset = index + (siteMeta.start_day || 0);
+  const label = currentLanguage === 'kr' ? `${dayOffset}일차` : `Day ${dayOffset}`;
+  el.textContent = `📅 ${dateStr}: ${label} ▾`;
 }
 
-function createTabs() {
-  const tabsContainer = document.getElementById("tabs");
-  const mobileList = document.getElementById("mobileDateList");
-  const currentDateBtn = document.getElementById("currentDateBtn");
-
-  dates.forEach((date, index) => {
-    const display = `${date.substring(0, 4)}-${date.substring(4, 6)}-${date.substring(6, 8)}`;
-
-    const tab = document.createElement("div");
-    tab.className = "tab";
-    tab.textContent = display;
-    tab.onclick = () => {
-      loadSchedule(date);
-      document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
-      tab.classList.add("active");
-      currentDateBtn.textContent = `📅 ${display} ▾`;
-    };
-    tabsContainer.appendChild(tab);
-
-    const li = document.createElement("li");
-    li.textContent = display;
-    li.onclick = () => {
-      loadSchedule(date);
-      currentDateBtn.textContent = `📅 ${display} ▾`;
-      mobileList.classList.add("hidden");
-      document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
-    };
-    mobileList.appendChild(li);
-
-    if (index === 0) {
-      tab.click();
-      li.click();
-    }
-  });
-
-  currentDateBtn.onclick = () => {
-    mobileList.classList.toggle("hidden");
-  };
+function selectDateByOffset(offset) {
+  const index = dates.indexOf(currentDate);
+  const nextIndex = Math.min(dates.length - 1, Math.max(0, index + offset));
+  const newDate = dates[nextIndex];
+  if (newDate !== currentDate) {
+    loadSchedule(newDate);
+    updateDateDisplay(newDate);
+  }
 }
 
 function loadSchedule(date) {
   currentDate = date;
   fetch(`daily_schedule/${date}_Schedule.json`)
-    .then((response) => {
-      if (!response.ok) throw new Error(`Failed to load: ${date}_Schedule.json`);
-      return response.json();
-    })
-    .then((data) => {
-      const scheduleContainer = document.getElementById("schedule");
-      scheduleContainer.innerHTML = "";
-
-      data.forEach((item) => {
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("schedule");
+      container.innerHTML = "";
+      data.forEach(item => {
         const type = item.type || "schedule";
         const itemDiv = document.createElement("div");
         itemDiv.className = `schedule-item ${type}`;
 
-        const leftDiv = document.createElement("div");
-        leftDiv.className = "schedule-left";
+        const left = document.createElement("div");
+        left.className = "schedule-left";
 
-        const rightDiv = document.createElement("div");
-        rightDiv.className = "schedule-right";
+        const right = document.createElement("div");
+        right.className = "schedule-right";
 
-        const langKey = currentLanguage === "kr" ? "event_kr" : "event_en";
-        const noteKey = currentLanguage === "kr" ? "note_kr" : "note_en";
+        const langKey = currentLanguage === 'kr' ? 'event_kr' : 'event_en';
+        const noteKey = currentLanguage === 'kr' ? 'note_kr' : 'note_en';
 
-        const startFormatted = formatTime(item.start, currentLanguage);
-        const endFormatted = formatTime(item.end, currentLanguage);
-        const timeStr = item.start ? `${startFormatted}${endFormatted ? ` – ${endFormatted}` : ""}` : `[Time TBA]`;
+        const start = formatTime(item.start, currentLanguage);
+        const end = formatTime(item.end, currentLanguage);
+        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ''}` : `[Time TBA]`;
 
-        let content = `
-          <div class="time-block">${timeStr}</div>
-          <div class="event-title">${item[langKey]}</div>
-        `;
+        let content = `<div class="time-block">${timeStr}</div>
+                       <div class="event-title">${item[langKey]}</div>`;
 
         if (item[noteKey]) {
           content += `<div>📝 ${item[noteKey]}</div>`;
         }
 
-        leftDiv.innerHTML = content;
+        left.innerHTML = content;
 
         if (item.ticket) {
-          const ticketLink = document.createElement("a");
-          ticketLink.href = item.ticket;
-          ticketLink.target = "_blank";
-          ticketLink.className = "schedule-button ticket-link";
-          ticketLink.textContent = buttonLabels[currentLanguage].ticket;
-          rightDiv.appendChild(ticketLink);
+          const btn = document.createElement("a");
+          btn.href = item.ticket;
+          btn.target = "_blank";
+          btn.className = "schedule-button ticket-link";
+          btn.textContent = buttonLabels[currentLanguage].ticket;
+          right.appendChild(btn);
         }
 
         if (item.map) {
-          const mapLink = document.createElement("a");
-          mapLink.href = item.map;
-          mapLink.target = "_blank";
-          mapLink.className = "schedule-button map-link";
-          mapLink.textContent = buttonLabels[currentLanguage].map;
-          rightDiv.appendChild(mapLink);
+          const btn = document.createElement("a");
+          btn.href = item.map;
+          btn.target = "_blank";
+          btn.className = "schedule-button map-link";
+          btn.textContent = buttonLabels[currentLanguage].map;
+          right.appendChild(btn);
         }
 
         if (item.more) {
-          const moreLink = document.createElement("a");
-          moreLink.href = item.more;
-          moreLink.target = "_blank";
-          moreLink.className = "schedule-button more-link";
-          moreLink.textContent = buttonLabels[currentLanguage].more;
-          rightDiv.appendChild(moreLink);
+          const btn = document.createElement("a");
+          btn.href = item.more;
+          btn.target = "_blank";
+          btn.className = "schedule-button more-link";
+          btn.textContent = buttonLabels[currentLanguage].more;
+          right.appendChild(btn);
         }
 
-        itemDiv.appendChild(leftDiv);
-        itemDiv.appendChild(rightDiv);
-        scheduleContainer.appendChild(itemDiv);
+        itemDiv.appendChild(left);
+        itemDiv.appendChild(right);
+        container.appendChild(itemDiv);
       });
-    })
-    .catch((err) => {
-      document.getElementById("schedule").innerHTML = "Schedule not available.";
-      console.error(err);
     });
 }
 
-function loadSiteInfo() {
+function loadSiteMeta() {
   fetch("page_meta.json")
-    .then((response) => response.json())
-    .then((data) => {
-      const titleEl = document.getElementById("siteTitle");
-      const authorEl = document.getElementById("authorLine");
-      const footerEl = document.getElementById("footerText");
-
-      titleEl.textContent = currentLanguage === "kr" ? data.title_kr : data.title_en;
-      footerEl.textContent = currentLanguage === "kr" ? data.footer_kr : data.footer_en;
-      authorEl.textContent = data.author ? `👤 ${data.author}` : "";
+    .then(res => res.json())
+    .then(data => {
+      siteMeta = data;
+      startDay = data.start_day || 0;
+      currentLanguage = data.default_language || 'en';
+      document.getElementById("languageSelect").value = currentLanguage;
+      document.getElementById("siteTitle").textContent = data[`title_${currentLanguage}`];
+      document.getElementById("authorLine").textContent = data.author ? `👤 ${data.author}` : "";
+      document.getElementById("footerText").textContent = data[`footer_${currentLanguage}`] || "";
     });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  createTabs();
-  loadSiteInfo();
+  loadSiteMeta();
+
+  const mobileList = document.getElementById("mobileDateList");
+  const dateDisplay = document.getElementById("dateDisplay");
+
+  // Build dropdown
+  dates.forEach(date => {
+    const li = document.createElement("li");
+    const index = dates.indexOf(date);
+    const dayLabel = currentLanguage === 'kr'
+      ? `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}: ${index + (startDay)}일차`
+      : `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}: Day ${index + (startDay)}`;
+    li.textContent = dayLabel;
+    li.onclick = () => {
+      loadSchedule(date);
+      updateDateDisplay(date);
+      mobileList.classList.add("hidden");
+    };
+    mobileList.appendChild(li);
+  });
+
+  // Toggle dropdown
+  let open = false;
+  dateDisplay.addEventListener("click", (e) => {
+    e.stopPropagation();
+    open = !open;
+    mobileList.classList.toggle("hidden", !open);
+  });
+
+  document.addEventListener("click", () => {
+    open = false;
+    mobileList.classList.add("hidden");
+  });
+
+  document.getElementById("prevDate").onclick = () => selectDateByOffset(-1);
+  document.getElementById("nextDate").onclick = () => selectDateByOffset(1);
+
   document.getElementById("languageSelect").addEventListener("change", (e) => {
     currentLanguage = e.target.value;
+    document.getElementById("siteTitle").textContent = siteMeta[`title_${currentLanguage}`];
+    document.getElementById("footerText").textContent = siteMeta[`footer_${currentLanguage}`] || "";
     if (currentDate) loadSchedule(currentDate);
-    loadSiteInfo();
+    updateDateDisplay(currentDate);
   });
+
+  const defaultDate = dates[0];
+  loadSchedule(defaultDate);
+  updateDateDisplay(defaultDate);
 });

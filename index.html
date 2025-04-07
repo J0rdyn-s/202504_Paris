@@ -13,20 +13,20 @@
         <label for="languageSelect">🌐</label>
         <select id="languageSelect">
           <option value="kr">🇰🇷 Korean</option>
-          <option value="en" selected>🇺🇸 English</option>
+          <option value="en">🇺🇸 English</option>
         </select>
       </div>
     </div>
 
-    <div class="tabs" id="tabs"></div>
-    <div class="mobile-date-toggle" id="mobileDateToggle">
-      <button id="currentDateBtn">📅 2025-04-11 ▾</button>
+    <div class="date-navigation">
+      <button id="prevDate" class="nav-arrow">◀</button>
+      <button id="dateDisplay" class="date-display">📅 Loading... ▾</button>
+      <button id="nextDate" class="nav-arrow">▶</button>
       <ul id="mobileDateList" class="hidden"></ul>
     </div>
 
     <div class="schedule" id="schedule">Select a date to view the schedule.</div>
 
-    <!-- Footer and Author Info -->
     <div class="meta-info">
       <div id="authorLine"></div>
       <div id="footerText"></div>

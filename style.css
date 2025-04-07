@@ -1,3 +1,4 @@
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,8 +9,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f4f7fa;
   color: #2d3748;
-  margin: 0;
-  padding: 0;
 }
 
 .top-bar {
@@ -18,11 +17,9 @@ body {
   align-items: center;
   background-color: #ffffff;
   padding: 12px 20px;
-  border-bottom: none;
   position: sticky;
   top: 0;
   z-index: 30;
-  margin-bottom: 0;
 }
 
 .top-bar .title {
@@ -38,103 +35,67 @@ body {
 }
 
 .language-toggle select {
-  appearance: none;
   border: none;
   border-radius: 20px;
   padding: 6px 14px;
   font-size: 14px;
-  font-weight: 500;
   background-color: #edf2f7;
-  color: #2d3748;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
   box-shadow: inset 0 0 0 1px #cbd5e0;
-}
-
-.language-toggle select:hover {
-  background-color: #e2e8f0;
-}
-
-.tabs {
-  display: flex;
-  overflow-x: auto;
-  background-color: #ffffff !important;
-  padding: 14px 8px 8px;
-  position: sticky;
-  top: 56px;
-  z-index: 10;
-  border: none !important;
-  box-shadow: none !important;
-}
-
-.tab {
-  padding: 10px 16px;
-  margin-right: 8px;
-  border-radius: 25px;
   cursor: pointer;
-  white-space: nowrap;
-  background-color: #edf2f7;
-  color: #4a5568;
-  font-weight: 500;
 }
 
-.tab:hover {
-  background-color: #e2e8f0;
-}
-
-.tab.active {
-  background-color: #3182ce;
-  color: #ffffff;
-  box-shadow: 0 2px 4px rgba(49, 130, 206, 0.4);
-}
-
-.mobile-date-toggle {
-  display: none;
-  background-color: #ffffff !important;
-  padding: 14px 16px 12px;
+.date-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background-color: #ffffff;
+  padding: 10px 0;
   position: sticky;
   top: 56px;
-  z-index: 15;
-  border: none !important;
-  box-shadow: none !important;
+  z-index: 20;
 }
 
-#currentDateBtn {
-  width: 100%;
-  padding: 10px 14px;
+.nav-arrow {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px;
+  color: #2d3748;
+}
+
+.date-display {
+  background-color: #edf2f7;
+  border: 1px solid #cbd5e0;
   border-radius: 8px;
   font-size: 15px;
   font-weight: 600;
-  border: 1px solid #cbd5e0;
-  background-color: #edf2f7;
   color: #2d3748;
-  text-align: left;
+  padding: 8px 14px;
   cursor: pointer;
 }
 
 #mobileDateList {
-  margin-top: 8px;
-  background-color: #fff;
+  position: absolute;
+  top: calc(100% + 4px);
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
-  max-height: 300px;
+  max-height: 250px;
   overflow-y: auto;
   list-style: none;
   padding: 0;
+  z-index: 999;
 }
 
 #mobileDateList li {
   padding: 10px 14px;
   cursor: pointer;
-  transition: background 0.2s;
 }
 
 #mobileDateList li:hover {
   background-color: #f7fafc;
-}
-
-.hidden {
-  display: none;
 }
 
 .schedule {
@@ -192,41 +153,21 @@ body {
   display: inline-block;
 }
 
-.ticket-link {
-  background-color: #38a169;
-}
+.ticket-link { background-color: #38a169; }
+.ticket-link:hover { background-color: #2f855a; }
 
-.ticket-link:hover {
-  background-color: #2f855a;
-}
+.map-link { background-color: #4299e1; }
+.map-link:hover { background-color: #3182ce; }
 
-.map-link {
-  background-color: #4299e1;
-}
-
-.map-link:hover {
-  background-color: #3182ce;
-}
-
-.more-link {
-  background-color: #718096;
-}
-
-.more-link:hover {
-  background-color: #4a5568;
-}
+.more-link { background-color: #718096; }
+.more-link:hover { background-color: #4a5568; }
 
 .schedule-item.info {
   background-color: #f7f7f7;
 }
 
-.schedule-item.info .event-title {
-  color: #4a5568;
-}
-
-.schedule-item.info .time-block {
-  color: #718096;
-}
+.schedule-item.info .event-title { color: #4a5568; }
+.schedule-item.info .time-block { color: #718096; }
 
 .meta-info {
   text-align: center;
@@ -234,27 +175,4 @@ body {
   color: #718096;
   margin: 40px 0 20px;
   line-height: 1.6;
-}
-
-.tabs,
-.mobile-date-toggle {
-  margin-top: -1px;
-}
-
-@media (max-width: 768px) {
-  .tabs {
-    display: none;
-  }
-  .mobile-date-toggle {
-    display: block;
-  }
-  .schedule-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .schedule-right {
-    align-self: stretch;
-    justify-content: flex-start;
-    margin-top: 5px;
-  }
 }

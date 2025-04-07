@@ -1,38 +1,38 @@
 ﻿[
     {
-        "event_kr":  "예시 일정입니다",
-        "ticket":  null,
         "type":  "schedule",
-        "event_en":  "Sample event",
         "start":  "0900",
+        "end":  "1000",
+        "event_kr":  "예시 일정입니다",
         "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "more":  "https://example.com/more-info",
-        "map":  null,
+        "event_en":  "Sample event",
         "note_en":  "Write your note here",
-        "end":  "1000"
+        "ticket":  null,
+        "map":  null,
+        "more":  "https://example.com/more-info"
     },
     {
-        "event_kr":  "🚶 다음 장소로 이동",
-        "ticket":  null,
         "type":  "info",
-        "event_en":  "Walk to the next place",
         "start":  "1000",
+        "end":  "1030",
+        "event_kr":  "🚶 다음 장소로 이동",
         "note_kr":  "15분 예상",
-        "more":  null,
-        "map":  "https://maps.google.com",
+        "event_en":  "Walk to the next place",
         "note_en":  "Estimated 15 minutes",
-        "end":  "1030"
+        "ticket":  null,
+        "map":  "https://maps.google.com",
+        "more":  null
     },
     {
-        "event_kr":  "예시 일정입니다",
-        "ticket":  null,
         "type":  "schedule",
-        "event_en":  "Sample event",
         "start":  "0900",
+        "end":  "1000",
+        "event_kr":  "예시 일정입니다",
         "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "more":  "https://example.com/more-info",
-        "map":  null,
+        "event_en":  "Sample event",
         "note_en":  "Write your note here",
-        "end":  "1000"
+        "ticket":  null,
+        "map":  null,
+        "more":  "https://example.com/more-info"
     }
 ]
