@@ -1,49 +1,59 @@
-
 let currentLanguage = "en";
 let currentDate = null;
 let dates = [];
 let siteMeta = {};
 let startDay = 0;
+let isDropdownOpen = false;
 
 const buttonLabels = {
   en: { ticket: "🎟️ Ticket", map: "🗺️ Map", more: "🔗 More Info" },
-  kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" }
+  kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" },
 };
 
-const startDate = new Date("2025-04-11");
-const endDate = new Date("2025-04-21");
-
-while (startDate <= endDate) {
-  const yyyy = startDate.getFullYear();
-  const mm = String(startDate.getMonth() + 1).padStart(2, '0');
-  const dd = String(startDate.getDate()).padStart(2, '0');
-  dates.push(`${yyyy}${mm}${dd}`);
-  startDate.setDate(startDate.getDate() + 1);
+function generateDates(startStr, endStr) {
+  const startDate = new Date(startStr);
+  const endDate = new Date(endStr);
+  while (startDate <= endDate) {
+    const yyyy = startDate.getFullYear();
+    const mm = String(startDate.getMonth() + 1).padStart(2, "0");
+    const dd = String(startDate.getDate()).padStart(2, "0");
+    dates.push(`${yyyy}${mm}${dd}`);
+    startDate.setDate(startDate.getDate() + 1);
+  }
 }
 
 function formatTime(raw, lang) {
   if (!raw || raw.length !== 4) return null;
   const hours = parseInt(raw.substring(0, 2), 10);
   const minutes = parseInt(raw.substring(2), 10);
-  if (lang === 'kr') {
+  if (lang === "kr") {
     const isPM = hours >= 12;
     const h = hours % 12 || 12;
-    const period = isPM ? '오후' : '오전';
-    return `${period} ${h}시${minutes > 0 ? ` ${minutes}분` : ''}`;
+    const period = isPM ? "오후" : "오전";
+    return `${period} ${h}시${minutes > 0 ? ` ${minutes}분` : ""}`;
   } else {
     const h = hours % 12 || 12;
-    const period = hours >= 12 ? 'PM' : 'AM';
-    return `${h}:${minutes.toString().padStart(2, '0')} ${period}`;
+    const period = hours >= 12 ? "PM" : "AM";
+    return `${h}:${minutes.toString().padStart(2, "0")} ${period}`;
   }
 }
 
 function updateDateDisplay(date) {
+  if (!siteMeta || !dates.length) return;
   const el = document.getElementById("dateDisplay");
   const index = dates.indexOf(date);
-  const dateStr = `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}`;
+  const year = date.substring(0, 4);
+  const month = date.substring(4, 6);
+  const day = date.substring(6, 8);
+  const weekdayIndex = new Date(`${year}-${month}-${day}`).getDay();
+  const weekdays = {
+    en: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    kr: ["일", "월", "화", "수", "목", "금", "토"],
+  };
+  const weekday = weekdays[currentLanguage][weekdayIndex];
   const dayOffset = index + (siteMeta.start_day || 0);
-  const label = currentLanguage === 'kr' ? `${dayOffset}일차` : `Day ${dayOffset}`;
-  el.textContent = `📅 ${dateStr}: ${label} ▾`;
+  const label = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차` : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
+  el.textContent = `📅 ${label} ▾`;
 }
 
 function selectDateByOffset(offset) {
@@ -59,11 +69,11 @@ function selectDateByOffset(offset) {
 function loadSchedule(date) {
   currentDate = date;
   fetch(`daily_schedule/${date}_Schedule.json`)
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const container = document.getElementById("schedule");
       container.innerHTML = "";
-      data.forEach(item => {
+      data.forEach((item) => {
         const type = item.type || "schedule";
         const itemDiv = document.createElement("div");
         itemDiv.className = `schedule-item ${type}`;
@@ -74,12 +84,12 @@ function loadSchedule(date) {
         const right = document.createElement("div");
         right.className = "schedule-right";
 
-        const langKey = currentLanguage === 'kr' ? 'event_kr' : 'event_en';
-        const noteKey = currentLanguage === 'kr' ? 'note_kr' : 'note_en';
+        const langKey = currentLanguage === "kr" ? "event_kr" : "event_en";
+        const noteKey = currentLanguage === "kr" ? "note_kr" : "note_en";
 
         const start = formatTime(item.start, currentLanguage);
         const end = formatTime(item.end, currentLanguage);
-        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ''}` : `[Time TBA]`;
+        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ""}` : `[Time TBA]`;
 
         let content = `<div class="time-block">${timeStr}</div>
                        <div class="event-title">${item[langKey]}</div>`;
@@ -124,67 +134,90 @@ function loadSchedule(date) {
     });
 }
 
-function loadSiteMeta() {
-  fetch("page_meta.json")
-    .then(res => res.json())
-    .then(data => {
-      siteMeta = data;
-      startDay = data.start_day || 0;
-      currentLanguage = data.default_language || 'en';
-      document.getElementById("languageSelect").value = currentLanguage;
-      document.getElementById("siteTitle").textContent = data[`title_${currentLanguage}`];
-      document.getElementById("authorLine").textContent = data.author ? `👤 ${data.author}` : "";
-      document.getElementById("footerText").textContent = data[`footer_${currentLanguage}`] || "";
-    });
-}
-
 document.addEventListener("DOMContentLoaded", () => {
-  loadSiteMeta();
-
   const mobileList = document.getElementById("mobileDateList");
   const dateDisplay = document.getElementById("dateDisplay");
+  const siteTitle = document.getElementById("siteTitle");
+  const authorLine = document.getElementById("authorLine");
+  const footerText = document.getElementById("footerText");
 
-  // Build dropdown
-  dates.forEach(date => {
-    const li = document.createElement("li");
-    const index = dates.indexOf(date);
-    const dayLabel = currentLanguage === 'kr'
-      ? `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}: ${index + (startDay)}일차`
-      : `${date.substring(0,4)}-${date.substring(4,6)}-${date.substring(6,8)}: Day ${index + (startDay)}`;
-    li.textContent = dayLabel;
-    li.onclick = () => {
-      loadSchedule(date);
-      updateDateDisplay(date);
-      mobileList.classList.add("hidden");
-    };
-    mobileList.appendChild(li);
+  let dates = [];
+  let startDay = 0;
+  let currentLanguage = "kr";
+
+  // Ensure the date list is hidden initially (using display: none)
+  mobileList.style.display = "none";
+
+  // Fetch and process the page meta data
+  fetch("page_meta.json")
+    .then((res) => res.json())
+    .then((data) => {
+      try {
+        startDay = data.start_day || 0;
+        currentLanguage = data.default_language || "kr";
+
+        siteTitle.textContent = data[`title_${currentLanguage}`];
+        authorLine.textContent = data.author ? `👤 ${data.author}` : "";
+        footerText.textContent = data[`footer_${currentLanguage}`] || "";
+
+        // Generate the dates based on start and end date
+        dates = generateDates(data.start_date, data.end_date);
+        if (!Array.isArray(dates) || dates.length === 0) {
+          console.error("⚠️ No dates generated. Check start_date/end_date in page_meta.json.");
+          return;
+        }
+
+        // Build the date list, but keep it hidden initially
+        mobileList.innerHTML = ""; // Clear any previous content
+        dates.forEach((date, index) => {
+          const li = document.createElement("li");
+          const dayLabel = currentLanguage === "kr" ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차` : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
+
+          li.textContent = dayLabel;
+          li.onclick = () => {
+            // Update the displayed date
+            dateDisplay.textContent = dayLabel;
+            // Hide the date list after selection (using display: none)
+            mobileList.style.display = "none";
+            // Optionally, load the schedule or update other content here
+            loadSchedule(date);
+            updateDateDisplay(date);
+          };
+          mobileList.appendChild(li); // Add the date to the list
+        });
+      } catch (e) {
+        console.error("🚨 Error processing site meta:", e);
+      }
+    })
+    .catch((err) => {
+      console.error("🚨 Failed to fetch page_meta.json:", err);
+    });
+
+  // Simple fallback for generateDates if missing
+  function generateDates(start, end) {
+    if (!start || !end) return [];
+
+    // Convert YYYY-MM-DD to YYYYMMDD
+    const startDate = new Date(start.replace(/-/g, "/"));
+    const endDate = new Date(end.replace(/-/g, "/"));
+
+    const result = [];
+    while (startDate <= endDate) {
+      const y = startDate.getFullYear();
+      const m = String(startDate.getMonth() + 1).padStart(2, "0");
+      const d = String(startDate.getDate()).padStart(2, "0");
+      result.push(`${y}${m}${d}`);
+      startDate.setDate(startDate.getDate() + 1);
+    }
+    return result;
+  }
+
+  // Toggle the visibility of the date list when clicking dateDisplay
+  dateDisplay.addEventListener("click", () => {
+    if (mobileList.style.display === "none") {
+      mobileList.style.display = "block"; // Show the list
+    } else {
+      mobileList.style.display = "none"; // Hide the list
+    }
   });
-
-  // Toggle dropdown
-  let open = false;
-  dateDisplay.addEventListener("click", (e) => {
-    e.stopPropagation();
-    open = !open;
-    mobileList.classList.toggle("hidden", !open);
-  });
-
-  document.addEventListener("click", () => {
-    open = false;
-    mobileList.classList.add("hidden");
-  });
-
-  document.getElementById("prevDate").onclick = () => selectDateByOffset(-1);
-  document.getElementById("nextDate").onclick = () => selectDateByOffset(1);
-
-  document.getElementById("languageSelect").addEventListener("change", (e) => {
-    currentLanguage = e.target.value;
-    document.getElementById("siteTitle").textContent = siteMeta[`title_${currentLanguage}`];
-    document.getElementById("footerText").textContent = siteMeta[`footer_${currentLanguage}`] || "";
-    if (currentDate) loadSchedule(currentDate);
-    updateDateDisplay(currentDate);
-  });
-
-  const defaultDate = dates[0];
-  loadSchedule(defaultDate);
-  updateDateDisplay(defaultDate);
 });

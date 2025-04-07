@@ -1,5 +1,8 @@
 {
-  "default_language": "en",
+  "default_language": "kr",
+  "start_day": 0,
+  "start_date": "2025-04-11",
+  "end_date": "2025-04-21",
   "title_en": "🧳 Travel Schedule",
   "title_kr": "🧳 여행 일정표",
   "author": "Jisu",

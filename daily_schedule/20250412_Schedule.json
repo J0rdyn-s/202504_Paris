@@ -4,7 +4,7 @@
     "start": "1045",
     "end": "1805",
     "event_kr": "✈️ 인천 공항 T1 → 샤를 드 골 공항 T1",
-    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "note_kr": "비행시간: 14시간 20분 / 아시아나항공 OZ501",
     "event_en": "Sample event",
     "note_en": "Write your note here",
     "ticket": null,
@@ -12,27 +12,39 @@
     "more": "https://example.com/more-info"
   },
   {
-    "type": "info",
-    "start": "1000",
-    "end": "1030",
-    "event_kr": "🚶 다음 장소로 이동",
+    "type": "schedule",
+    "start": "1805",
+    "end": "1730",
+    "event_kr": "수하물 찾기 & 출입국 심사",
     "note_kr": "15분 예상",
-    "event_en": "Walk to the next place",
+    "event_en": "Baggage Claim",
     "note_en": "Estimated 15 minutes",
     "ticket": null,
-    "map": "https://maps.google.com",
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "1930",
+    "end": "2030",
+    "event_kr": "🚕 호텔로 이동",
+    "note_kr": "우버 탑승 예정, 1시간 예상",
+    "event_en": "🚕 To Hotel",
+    "note_en": "By Uber, EST 1h",
+    "ticket": null,
+    "map": "",
     "more": null
   },
   {
     "type": "schedule",
-    "start": "0900",
-    "end": "1000",
-    "event_kr": "예시 일정입니다",
-    "note_kr": "이곳에 한국어 메모를 작성하세요",
-    "event_en": "Sample event",
-    "note_en": "Write your note here",
+    "start": "2030",
+    "end": null,
+    "event_kr": "호텔 체크인",
+    "note_kr": "시티즌 M 파리 라 데팡스 호텔",
+    "event_en": "Hotel Check-in",
+    "note_en": null,
     "ticket": null,
-    "map": null,
-    "more": "https://example.com/more-info"
+    "map": "https://maps.app.goo.gl/oVQr1JVXWjmfRGup9",
+    "more": null
   }
 ]
