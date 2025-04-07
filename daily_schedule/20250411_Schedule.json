@@ -5,8 +5,8 @@
     "end": "2131",
     "event_kr": "🚄 대전역 → 서울역",
     "note_kr": "KTX-산천 294, 6호차 12 A, B, C, D",
-    "event_en": "Sample event",
-    "note_en": "Write your note here",
+    "event_en": "🚄 Daejeon → Seoul",
+    "note_en": "KTX-산천 294, Car no.6 12 A, B, C, D",
     "ticket": null,
     "map": null,
     "more": "https://example.com/more-info"
