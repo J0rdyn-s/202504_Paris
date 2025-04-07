@@ -3,103 +3,95 @@ fetch("page_meta.json")
   .then((res) => res.json())
   .then((data) => {
     const defaultLanguage = data.default_language || "en";
-    // Set the language select to default value
     document.getElementById("languageSelect").value = defaultLanguage;
-
-    // Load the properties for the default language
     loadProperties(defaultLanguage);
-
-    // Load content for the default language
     loadTravelInfo(defaultLanguage);
 
-    // Handle language change event
     document.getElementById("languageSelect").addEventListener("change", (event) => {
       const selectedLanguage = event.target.value;
-      loadProperties(selectedLanguage); // Update text based on selected language
-      loadTravelInfo(selectedLanguage); // Load the travel info for the selected language
+      loadProperties(selectedLanguage);
+      loadTravelInfo(selectedLanguage);
     });
   })
-  .catch((err) => {
-    console.error("Error loading page_meta.json:", err);
-  });
+  .catch((err) => console.error("Error loading page_meta.json:", err));
 
-// Function to load properties from a .properties file
+// Load properties from a .properties file
 function loadProperties(language) {
-  const propertiesFile = `properties_${language}.properties`; // Determine the correct properties file
+  const propertiesFile = `properties_${language}.properties`;
 
   fetch(propertiesFile)
-    .then((res) => res.text()) // Fetch the properties file as text
+    .then((res) => res.text())
     .then((text) => {
-      const properties = parseProperties(text); // Parse the properties
-      updateUI(properties); // Update the UI elements
+      const properties = parseProperties(text);
+      updateUI(properties);
     })
-    .catch((err) => {
-      console.error(`Error loading ${propertiesFile}:`, err);
-    });
+    .catch((err) => console.error(`Error loading ${propertiesFile}:`, err));
 }
 
-// Function to parse .properties file text into key-value pairs
-function parseProperties(propertiesText) {
-  const properties = {};
-  const lines = propertiesText.split("\n");
+// Parse .properties file text into key-value pairs
+function parseProperties(text) {
+  const props = {};
+  const lines = text.split("\n");
 
   lines.forEach((line) => {
     if (line.trim() && !line.startsWith("#")) {
-      const [key, value] = line.split("=");
-      if (key && value) {
-        properties[key.trim()] = value.trim();
+      const [key, ...valueParts] = line.split("=");
+      if (key && valueParts.length > 0) {
+        props[key.trim()] = valueParts.join("=").trim();
       }
     }
   });
 
-  return properties;
+  return props;
 }
 
-// Function to update UI elements with the properties
+// Update static UI elements with translated text
 function updateUI(properties) {
-  // Update the "More Info" button text
-  const buttons = document.querySelectorAll(".more-info-button");
-  buttons.forEach((button) => {
-    if (button.textContent === "More Info") {
-      button.textContent = properties["more_info_button"];
-    } else if (button.textContent === "Less Info") {
-      button.textContent = properties["less_info_button"];
+  const showMoreText = properties["show_more_button"] || "More Info";
+  const showLessText = properties["show_less_button"] || "Less Info";
+  const goToScheduleText = properties["go_to_schedule_button"] || "Schedule";
+
+  // Update toggle buttons already rendered
+  document.querySelectorAll(".more-info-button").forEach((button) => {
+    if (button.textContent === "More Info" || button.textContent === "Less Info") {
+      button.textContent = button.textContent === "More Info" ? showMoreText : showLessText;
     }
   });
+
+  // Update schedule button
+  const scheduleButton = document.getElementById("toSchedule");
+  if (scheduleButton) {
+    scheduleButton.textContent = goToScheduleText;
+  }
+
+  // Save for later use in dynamic rendering
+  window.translatedText = { showMoreText, showLessText };
 }
 
-// Function to load the correct travel_info JSON based on language
+// Load language-specific travel information
 function loadTravelInfo(language) {
   fetch(`travel_info_${language}.json`)
     .then((res) => res.json())
-    .then((data) => {
-      renderSections(data); // Render the sections dynamically based on the fetched data
-    })
-    .catch((err) => {
-      console.error(`Error loading travel_info_${language}.json:`, err);
-    });
+    .then((data) => renderSections(data))
+    .catch((err) => console.error(`Error loading travel_info_${language}.json:`, err));
 }
 
-// Function to render the sections dynamically
+// Render each section dynamically
 function renderSections(data) {
-  const sectionsContainer = document.getElementById("sectionsContainer");
-  sectionsContainer.innerHTML = ""; // Clear any existing content
+  const container = document.getElementById("sectionsContainer");
+  container.innerHTML = "";
 
-  // Loop through the sections and create them dynamically
   for (const sectionKey in data) {
     const sectionData = data[sectionKey];
 
-    // Create a new section
     const section = document.createElement("div");
     section.classList.add("section");
     section.id = sectionKey;
 
-    // Create the section title
     const title = document.createElement("h2");
     title.textContent = sectionData.title;
     section.appendChild(title);
 
-    // Create a list of content items (either label/value or phrase/translation)
     const list = document.createElement("ul");
     sectionData.content.forEach((item) => {
       const li = document.createElement("li");
@@ -111,57 +103,43 @@ function renderSections(data) {
       list.appendChild(li);
     });
 
-    section.appendChild(list);
-
-    // Handle visibility based on the 'hidden' property
     if (sectionData.hidden) {
-      // If hidden, add the 'hidden' class to keep it hidden by default
-      const hiddenContent = document.createElement("div");
-      hiddenContent.classList.add("hidden");
-      hiddenContent.appendChild(list); // Add the content into the hidden div
+      const hiddenDiv = document.createElement("div");
+      hiddenDiv.classList.add("hidden");
+      hiddenDiv.appendChild(list);
 
-      // Add a toggle button to show/hide the content
-      const toggleButton = document.createElement("button");
-      toggleButton.classList.add("more-info-button");
-      toggleButton.textContent = `More Info`;
+      const toggleBtn = document.createElement("button");
+      toggleBtn.classList.add("more-info-button");
+      toggleBtn.textContent = (window.translatedText && window.translatedText.showMoreText) || "More Info";
 
-      // Toggle button behavior
-      toggleButton.onclick = () => {
-        hiddenContent.classList.toggle("hidden");
-        if (hiddenContent.classList.contains("hidden")) {
-          toggleButton.textContent = `More Info`;
-        } else {
-          toggleButton.textContent = `Less Info`;
-        }
+      toggleBtn.onclick = () => {
+        hiddenDiv.classList.toggle("hidden");
+        toggleBtn.textContent = hiddenDiv.classList.contains("hidden")
+          ? (window.translatedText && window.translatedText.showMoreText) || "More Info"
+          : (window.translatedText && window.translatedText.showLessText) || "Less Info";
       };
 
-      // Append the toggle button and hidden content to the section
-      section.appendChild(toggleButton);
-      section.appendChild(hiddenContent);
+      section.appendChild(toggleBtn);
+      section.appendChild(hiddenDiv);
+    } else {
+      section.appendChild(list);
     }
 
-    // Render the links section as a button for more information
-    if (sectionData.links !== null) {
+    if (Array.isArray(sectionData.links)) {
       sectionData.links.forEach((link) => {
-        const button = document.createElement("button");
-        button.classList.add("more-info-button");
-        button.textContent = link.text; // Button text will be the link text
-
-        // When the button is clicked, open the URL
-        button.onclick = () => {
-          window.location.href = link.url; // Navigate to the link
-        };
-
-        section.appendChild(button);
+        const linkBtn = document.createElement("button");
+        linkBtn.classList.add("more-info-button");
+        linkBtn.textContent = link.text;
+        linkBtn.onclick = () => (window.location.href = link.url);
+        section.appendChild(linkBtn);
       });
     }
 
-    // Append the section to the container
-    sectionsContainer.appendChild(section);
+    container.appendChild(section);
   }
 }
 
-// Schedule button event
-document.getElementById("toSchedule").addEventListener("click", function () {
-  window.location.href = "index.html"; // Navigate to the schedule page
+// Schedule page redirection
+document.getElementById("toSchedule").addEventListener("click", () => {
+  window.location.href = "index.html";
 });
