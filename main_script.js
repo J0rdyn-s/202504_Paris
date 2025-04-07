@@ -43,17 +43,17 @@ fetch("travel_info.json")
         hiddenContent.appendChild(list); // Add the content into the hidden div
 
         // Add a toggle button to show/hide the content
-        const toggleButton = document.createElement("div");
-        toggleButton.classList.add("toggle");
-        toggleButton.textContent = `Show ${sectionData.title} Info`;
+        const toggleButton = document.createElement("button");
+        toggleButton.classList.add("more-info-button");
+        toggleButton.textContent = `More Info`;
 
         // Toggle button behavior
         toggleButton.onclick = () => {
           hiddenContent.classList.toggle("hidden");
           if (hiddenContent.classList.contains("hidden")) {
-            toggleButton.textContent = `Show ${sectionData.title} Info`;
+            toggleButton.textContent = `More Info`;
           } else {
-            toggleButton.textContent = `Hide ${sectionData.title} Info`;
+            toggleButton.textContent = `Less Info`;
           }
         };
 
@@ -62,22 +62,20 @@ fetch("travel_info.json")
         section.appendChild(hiddenContent);
       }
 
-      // Render the "For more information" links, if any
+      // Render the links section as a button for more information
       if (sectionData.links !== null) {
-        const linksContainer = document.createElement("div");
-        linksContainer.classList.add("links");
-        const linksHeader = document.createElement("h3");
-        linksHeader.textContent = "For more information:";
-        linksContainer.appendChild(linksHeader);
-
         sectionData.links.forEach((link) => {
-          const linkElement = document.createElement("a");
-          linkElement.href = link.url;
-          linkElement.textContent = link.text;
-          linksContainer.appendChild(linkElement);
-        });
+          const button = document.createElement("button");
+          button.classList.add("more-info-button");
+          button.textContent = link.text; // Button text will be the link text
 
-        section.appendChild(linksContainer);
+          // When the button is clicked, open the URL
+          button.onclick = () => {
+            window.location.href = link.url; // Navigate to the link
+          };
+
+          section.appendChild(button);
+        });
       }
 
       // Append the section to the container

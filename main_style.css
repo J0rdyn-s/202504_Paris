@@ -1,65 +1,122 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  padding: 20px;
-  background-color: #f4f4f4;
+/* Basic Reset */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  padding: 40px 20px;
+  line-height: 1.6;
 }
 
 h1 {
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3em;
+  margin-bottom: 40px;
+  color: #333;
 }
 
+/* Section Styling */
 .section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  padding: 10px;
-  background-color: transparent;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Section Titles */
 .section h2 {
   font-size: 1.8em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: #333;
 }
 
+/* Content List */
 .section ul {
   list-style-type: none;
-  padding: 0;
 }
 
 .section ul li {
-  margin: 8px 0;
-  font-size: 1.1em;
+  margin: 10px 0;
+  font-size: 1.2em;
 }
 
 .section ul li strong {
   color: #007bff;
 }
 
+/* Toggle Button */
+.more-info-button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.more-info-button:hover {
+  background-color: #0056b3;
+}
+
+.more-info-button:focus {
+  outline: none;
+}
+
+/* Links Container Styling */
+.links {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.links a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 5px 0;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #0056b3;
+}
+
 .hidden {
   display: none;
 }
 
-.toggle {
-  cursor: pointer;
-  color: #007bff;
-  font-size: 1.2em;
-  text-decoration: underline;
-  margin-top: 10px;
-}
+/* Layout Adjustments */
+@media (min-width: 768px) {
+  body {
+    max-width: 900px;
+    margin: auto;
+  }
 
-.links {
-  text-align: center;
-  margin-top: 20px;
-}
+  .section {
+    display: flex;
+    flex-direction: column;
+  }
 
-.links a {
-  text-decoration: none;
-  color: #007bff;
-  font-weight: bold;
-  margin: 0 10px;
-}
-
-.links a:hover {
-  text-decoration: underline;
+  .section ul {
+    margin-left: 20px;
+  }
 }
