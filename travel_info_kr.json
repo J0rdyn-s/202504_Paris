@@ -28,15 +28,15 @@
     ]
   },
   "insurance_info": {
-    "title": "보험 가임 내역서",
-    "hidden": true,
+    "title": "보험 가입 내역서",
+    "hidden": false,
     "content": [
-      { "label": "Provider", "value": "Example Insurance Co." },
-      { "label": "Policy Number", "value": "ABC123456789" },
-      { "label": "Contact Number", "value": "1-800-123-4567" },
-      { "label": "Emergency Assistance", "value": "1-800-555-1234" }
+      { "label": "보험사", "value": "캐롯손해보험 X 마이뱅크" },
+      { "label": "증권번호", "value": "FAC0244404688000" },
+      { "label": "고객센터", "value": "contact@mibankins.com 또는 02‐6925‐1517" },
+      { "label": "해외여행 중 긴급연락처(24시간)", "value": "82‐2‐360‐2541" }
     ],
-    "links": [{ "text": "Insurance Details", "url": "insuranceDetails.html" }]
+    "links": [{ "text": "해외여행자보험 가입증명서", "url": "additionals/insurance.pdf" }]
   },
   "basic_phrases": {
     "title": "기초 회화",
