@@ -3,8 +3,8 @@
     "title": "Hotel Information",
     "hidden": false,
     "content": [
-      { "label": "Hotel Name", "value": "Example Hotel" },
-      { "label": "Address", "value": "123 Main St, City, Country" },
+      { "label": "Hotel Name", "value": "citizenM Paris La Défense" },
+      { "label": "Address", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
       { "label": "Check-in", "value": "3:00 PM" },
       { "label": "Check-out", "value": "12:00 PM" },
       { "label": "Phone Number", "value": "(123) 456-7890" }

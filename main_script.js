@@ -47,25 +47,40 @@ function parseProperties(text) {
 
 // Update static UI elements with translated text
 function updateUI(properties) {
-  const showMoreText = properties["show_more_button"] || "More Info";
-  const showLessText = properties["show_less_button"] || "Less Info";
-  const goToScheduleText = properties["go_to_schedule_button"] || "Schedule";
+  // Get current language-specific translations
+  const showMoreText = properties["show_more_button"] || "Show More";
+  const showLessText = properties["show_less_button"] || "Show Less";
+  const goToScheduleText = properties["go_to_schedule_button"] || "Go to Schedule";
 
-  // Update toggle buttons already rendered
-  document.querySelectorAll(".more-info-button").forEach((button) => {
-    if (button.textContent === "More Info" || button.textContent === "Less Info") {
-      button.textContent = button.textContent === "More Info" ? showMoreText : showLessText;
+  // Store translated strings globally for later use in renderSections
+  window.translatedText = {
+    showMoreText,
+    showLessText,
+  };
+
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll("[data-i18n]").forEach((el) => {
+    const key = el.getAttribute("data-i18n");
+    if (properties[key]) {
+      el.textContent = properties[key];
     }
   });
 
-  // Update schedule button
-  const scheduleButton = document.getElementById("toSchedule");
-  if (scheduleButton) {
-    scheduleButton.textContent = goToScheduleText;
-  }
+  // Update "Show More" / "Show Less" buttons already rendered in the DOM
+  document.querySelectorAll(".more-info-button").forEach((button) => {
+    const text = button.textContent.trim();
+    if (text === "More Info" || text === "Show More" || text === window.translatedText?.showMoreText) {
+      button.textContent = showMoreText;
+    } else if (text === "Less Info" || text === "Show Less" || text === window.translatedText?.showLessText) {
+      button.textContent = showLessText;
+    }
+  });
 
-  // Save for later use in dynamic rendering
-  window.translatedText = { showMoreText, showLessText };
+  // Update the "Go to Schedule" button (just in case it doesn't have data-i18n)
+  const scheduleBtn = document.getElementById("toSchedule");
+  if (scheduleBtn) {
+    scheduleBtn.textContent = goToScheduleText;
+  }
 }
 
 // Load language-specific travel information

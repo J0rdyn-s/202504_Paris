@@ -4,7 +4,7 @@
     "hidden": false,
     "content": [
       { "label": "호텔명", "value": "시티즌M 파리 라 데팡스" },
-      { "label": "주소", "value": "123 Main St, City, Country" },
+      { "label": "주소", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
       { "label": "체크인", "value": "3:00 PM" },
       { "label": "체크아웃", "value": "12:00 PM" },
       { "label": "연락처", "value": "(123) 456-7890" }
