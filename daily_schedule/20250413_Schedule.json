@@ -92,8 +92,8 @@
     "event_en": "Galeries Lafayette Rooftop Night View",
     "note_en": null,
     "ticket": null,
-    "map": null,
-    "more": "https://maps.app.goo.gl/mtRraw1VvXHYPg1w9"
+    "map": "https://maps.app.goo.gl/mtRraw1VvXHYPg1w9",
+    "more": null
   },
   {
     "type": "schedule",
