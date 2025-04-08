@@ -1,38 +1,14 @@
 ﻿[
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    },
-    {
-        "type":  "info",
-        "start":  "1000",
-        "end":  "1030",
-        "event_kr":  "🚶 다음 장소로 이동",
-        "note_kr":  "15분 예상",
-        "event_en":  "Walk to the next place",
-        "note_en":  "Estimated 15 minutes",
-        "ticket":  null,
-        "map":  "https://maps.google.com",
-        "more":  null
-    },
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    }
+  {
+    "type": "schedule",
+    "start": "0930",
+    "end": "1330",
+    "event_kr": "Louvre Museum",
+    "note_kr": null,
+    "event_en": "Louvre Museum",
+    "note_en": null,
+    "ticket": "attachments/Louvre-tickets_V25078574340.pdf",
+    "map": null,
+    "more": null
+  }
 ]

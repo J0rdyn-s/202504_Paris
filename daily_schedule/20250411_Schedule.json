@@ -9,7 +9,7 @@
     "note_en": "KTX-산천 294, Car no.6 12 A, B, C, D",
     "ticket": null,
     "map": null,
-    "more": "https://example.com/more-info"
+    "more": null
   },
   {
     "type": "info",
@@ -33,6 +33,6 @@
     "note_en": "Write your note here",
     "ticket": null,
     "map": null,
-    "more": "https://example.com/more-info"
+    "more": null
   }
 ]

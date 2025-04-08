@@ -1,38 +1,38 @@
 ﻿[
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    },
-    {
-        "type":  "info",
-        "start":  "1000",
-        "end":  "1030",
-        "event_kr":  "🚶 다음 장소로 이동",
-        "note_kr":  "15분 예상",
-        "event_en":  "Walk to the next place",
-        "note_en":  "Estimated 15 minutes",
-        "ticket":  null,
-        "map":  "https://maps.google.com",
-        "more":  null
-    },
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    }
+  {
+    "type": "schedule",
+    "start": "1000",
+    "end": "1230",
+    "event_kr": "예시 일정입니다",
+    "note_kr": "Musée d'Orsay",
+    "event_en": "Sample event",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1400",
+    "end": "1600",
+    "event_kr": "Musée de l'Orangerie",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Musée de l'Orangerie",
+    "note_en": "Write your note here",
+    "ticket": "attachments/Musée_de_l'Orangerie_Tickets_2506919687500400568.pdf",
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "2030",
+    "end": "2130",
+    "event_kr": "예시 일정입니다",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Arc de Triomphe",
+    "note_en": "sunset 20:44",
+    "ticket": null,
+    "map": null,
+    "more": null
+  }
 ]

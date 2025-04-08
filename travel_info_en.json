@@ -27,7 +27,10 @@
       { "label": "Flight Duration", "value": "14h 20m" },
       { "label": "Seat", "value": "14h 20m" }
     ],
-    "links": [{ "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ501" }]
+    "links": [
+      { "text": "E-ticket", "url": "attachments/FKYZODBS_English_Check-in_Voucher_(For_Visa Application).pdf" },
+      { "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ501" }
+    ]
   },
   "flight_return": {
     "title": "🛬 Return Flight",

@@ -1,38 +1,86 @@
 ﻿[
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    },
-    {
-        "type":  "info",
-        "start":  "1000",
-        "end":  "1030",
-        "event_kr":  "🚶 다음 장소로 이동",
-        "note_kr":  "15분 예상",
-        "event_en":  "Walk to the next place",
-        "note_en":  "Estimated 15 minutes",
-        "ticket":  null,
-        "map":  "https://maps.google.com",
-        "more":  null
-    },
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    }
+  {
+    "type": "schedule",
+    "start": "1030",
+    "end": "1130",
+    "event_kr": "Chaumet",
+    "note_kr": null,
+    "event_en": "Chaumet",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1200",
+    "end": "1300",
+    "event_kr": "Bistrot richelieu",
+    "note_kr": null,
+    "event_en": "Bistrot richelieu",
+    "note_en": null,
+    "ticket": null,
+    "map": "https://maps.google.com",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1300",
+    "end": "1400",
+    "event_kr": "Tuileries Garden",
+    "note_kr": null,
+    "event_en": "Tuileries Garden",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1430",
+    "end": "1530",
+    "event_kr": "Place de la Concorde",
+    "note_kr": null,
+    "event_en": "Place de la Concorde",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1530",
+    "end": "1630",
+    "event_kr": "Pont Alexandre-III",
+    "note_kr": null,
+    "event_en": "Pont Alexandre-III",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1730",
+    "end": "1845",
+    "event_kr": "Chez Bouillon Pigalle",
+    "note_kr": null,
+    "event_en": "Chez Bouillon Pigalle",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1300",
+    "end": "1400",
+    "event_kr": "Montmartre",
+    "note_kr": "sunset at 20:41",
+    "event_en": "Montmartre",
+    "note_en": "sunset at 20:41",
+    "ticket": null,
+    "map": null,
+    "more": null
+  }
 ]

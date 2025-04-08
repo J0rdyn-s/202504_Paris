@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "type": "schedule",
     "start": "1045",
@@ -9,7 +9,7 @@
     "note_en": "Write your note here",
     "ticket": null,
     "map": null,
-    "more": "https://example.com/more-info"
+    "more": null
   },
   {
     "type": "schedule",
@@ -32,7 +32,7 @@
     "event_en": "🚕 To Hotel",
     "note_en": "By Uber, EST 1h",
     "ticket": null,
-    "map": "",
+    "map": null,
     "more": null
   },
   {

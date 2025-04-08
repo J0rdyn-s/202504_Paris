@@ -1,38 +1,50 @@
 ﻿[
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    },
-    {
-        "type":  "info",
-        "start":  "1000",
-        "end":  "1030",
-        "event_kr":  "🚶 다음 장소로 이동",
-        "note_kr":  "15분 예상",
-        "event_en":  "Walk to the next place",
-        "note_en":  "Estimated 15 minutes",
-        "ticket":  null,
-        "map":  "https://maps.google.com",
-        "more":  null
-    },
-    {
-        "type":  "schedule",
-        "start":  "0900",
-        "end":  "1000",
-        "event_kr":  "예시 일정입니다",
-        "note_kr":  "이곳에 한국어 메모를 작성하세요",
-        "event_en":  "Sample event",
-        "note_en":  "Write your note here",
-        "ticket":  null,
-        "map":  null,
-        "more":  "https://example.com/more-info"
-    }
+  {
+    "type": "schedule",
+    "start": "0900",
+    "end": "1300",
+    "event_kr": "Palace of Versailles",
+    "note_kr": null,
+    "event_en": "Palace of Versailles",
+    "note_en": null,
+    "ticket": "attachments/2025-04_Versailles_Tickets.pdf",
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1600",
+    "end": "1700",
+    "event_kr": "Sainte-Chapelle",
+    "note_kr": null,
+    "event_en": "Sainte-Chapelle",
+    "note_en": null,
+    "ticket": "attachments/2025-04_Sainte-Chapelle_Tickets.pdf",
+    "map": "https://maps.app.goo.gl/7ftko9s8phqkpxoX9",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1700",
+    "end": "1800",
+    "event_kr": "Cathédrale Notre-Dame de Paris",
+    "note_kr": "이곳에 한국어 메모를 작성하세요",
+    "event_en": "Cathédrale Notre-Dame de Paris",
+    "note_en": "Write your note here",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": "1700",
+    "end": "1800",
+    "event_kr": "Family Dinner",
+    "note_kr": null,
+    "event_en": "Family Dinner",
+    "note_en": null,
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/RrrX8YmL6xCT8eru8",
+    "more": null
+  }
 ]
