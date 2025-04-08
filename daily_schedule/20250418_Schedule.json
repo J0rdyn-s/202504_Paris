@@ -3,12 +3,12 @@
     "type": "schedule",
     "start": "0930",
     "end": "1330",
-    "event_kr": "Louvre Museum",
+    "event_kr": "루브르 박물관",
     "note_kr": null,
     "event_en": "Louvre Museum",
     "note_en": null,
     "ticket": "attachments/Louvre-tickets_V25078574340.pdf",
-    "map": null,
+    "map": "https://maps.app.goo.gl/C118zp5wK1r2rV2J8",
     "more": null
   }
 ]

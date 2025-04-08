@@ -4,11 +4,11 @@
     "start": null,
     "end": "1505",
     "event_kr": "✈️ 샤를 드 골 공항 T1 → 인천 공항 T1",
-    "note_kr": "비행시간: 12시간 / 아시아나항공 OZ502",
-    "event_en": "Sample event",
-    "note_en": "Write your note here",
+    "note_kr": "비행시간: 12시간 / 아시아나항공 OZ502 </br> 좌석 35 H, J, K / 23 E",
+    "event_en": "✈️ CDG T1 → ICN T1",
+    "note_en": "Flight duration: 12 hours / Asiana Airlines OZ502 </br> Seats 35 H, J, K / 23 E",
     "ticket": null,
-    "map": null,
+    "map": "https://maps.app.goo.gl/xf1EaNcPJwffMNteA",
     "more": null
   }
 ]

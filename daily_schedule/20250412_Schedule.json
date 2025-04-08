@@ -1,12 +1,36 @@
 ﻿[
   {
+    "type": "info",
+    "start": null,
+    "end": null,
+    "event_kr": "👟 호텔 체크아웃 및 이동",
+    "note_kr": "위탁 수하물 체크인, 출국심사, 면세품 인도",
+    "event_en": "👟 Hotel Checkout & Transfer",
+    "note_en": "Checked baggage drop-off, immigration, duty-free pickup",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
     "type": "schedule",
+    "start": null,
+    "end": "1000",
+    "event_kr": "아침 식사",
+    "note_kr": null,
+    "event_en": "Breakfast",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
     "start": "1045",
     "end": "1805",
     "event_kr": "✈️ 인천 공항 T1 → 샤를 드 골 공항 T1",
-    "note_kr": "비행시간: 14시간 20분</br>아시아나항공 OZ501",
-    "event_en": "Sample event",
-    "note_en": "Write your note here",
+    "note_kr": "비행시간: 14시간 20분</br>아시아나항공 OZ501 </br> 좌석 26 A, B, C, D",
+    "event_en": "✈️ Incheon Airport T1 → Charles de Gaulle Airport T1",
+    "note_en": "Flight duration: 14 hours 20 minutes</br>Asiana Airlines OZ501 </br> Seats 26 A, B, C, D",
     "ticket": null,
     "map": null,
     "more": null
@@ -16,9 +40,9 @@
     "start": "1805",
     "end": "1930",
     "event_kr": "수하물 찾기 & 출입국 심사",
-    "note_kr": "15분 예상",
-    "event_en": "Baggage Claim",
-    "note_en": "Estimated 15 minutes",
+    "note_kr": "1시간 소요 예상",
+    "event_en": "Baggage Claim & Immigration",
+    "note_en": "Estimated duration: 1 hour",
     "ticket": null,
     "map": null,
     "more": null
@@ -30,7 +54,7 @@
     "event_kr": "🚕 호텔로 이동",
     "note_kr": "우버 탑승 예정, 1시간 예상",
     "event_en": "🚕 To Hotel",
-    "note_en": "By Uber, EST 1h",
+    "note_en": "By Uber, Estimated 1 hour",
     "ticket": null,
     "map": "https://maps.app.goo.gl/cmXMs29hcC14SiaL9",
     "more": null
@@ -42,7 +66,7 @@
     "event_kr": "호텔 체크인",
     "note_kr": "시티즌 M 파리 라 데팡스 호텔",
     "event_en": "Hotel Check-in",
-    "note_en": null,
+    "note_en": "citizenM Paris La Défense Hotel",
     "ticket": null,
     "map": "https://maps.app.goo.gl/oVQr1JVXWjmfRGup9",
     "more": null
