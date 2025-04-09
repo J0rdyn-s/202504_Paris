@@ -43,16 +43,21 @@ function generateDates(startStr, endStr) {
 
 function formatTime(raw, lang) {
   if (!raw || raw.length !== 4) return null;
+
   const hours = parseInt(raw.substring(0, 2), 10);
   const minutes = parseInt(raw.substring(2), 10);
+
+  const isPM = hours >= 12;
+  const h = hours % 12 || 12;
+
+  const amLabel = translations["am"] || (lang === "kr" ? "오전" : "AM");
+  const pmLabel = translations["pm"] || (lang === "kr" ? "오후" : "PM");
+
   if (lang === "kr") {
-    const isPM = hours >= 12;
-    const h = hours % 12 || 12;
-    const period = isPM ? "오후" : "오전";
+    const period = isPM ? pmLabel : amLabel;
     return `${period} ${h}시${minutes > 0 ? ` ${minutes}분` : ""}`;
   } else {
-    const h = hours % 12 || 12;
-    const period = hours >= 12 ? "PM" : "AM";
+    const period = isPM ? pmLabel : amLabel;
     return `${h}:${minutes.toString().padStart(2, "0")} ${period}`;
   }
 }
