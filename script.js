@@ -206,6 +206,15 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileList.style.display = mobileList.style.display === "none" ? "block" : "none";
   });
 
+  // ✅ Close the dropdown when clicking outside
+  document.addEventListener("click", (e) => {
+    const isDisplayClicked = dateDisplay.contains(e.target);
+    const isDropdownClicked = mobileList.contains(e.target);
+    if (!isDisplayClicked && !isDropdownClicked) {
+      mobileList.style.display = "none";
+    }
+  });
+
   // ✅ Language selector event
   languageSelect.addEventListener("change", (e) => {
     currentLanguage = e.target.value;
