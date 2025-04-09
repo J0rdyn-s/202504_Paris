@@ -5,13 +5,24 @@
     "content": [
       { "label": "호텔명", "value": "시티즌M 파리 라 데팡스" },
       { "label": "주소", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
-      { "label": "체크인", "value": "오후 2:00" },
-      { "label": "체크아웃", "value": "오전 11:00" },
+      { "label": "체크인", "value": "2025년 4월 12일 (토) 오후 2시" },
+      { "label": "체크아웃", "value": "2025년 4월 20일 (일) 오전 11시" },
       { "label": "연락처", "value": "01 86 65 59 60" }
     ],
     "links": [
       { "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
-      { "text": "호텔 예약 서류", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }
+      {
+        "text": "호텔 예약 서류 1 (DCNOEOOH / SNZXOIRO)",
+        "url": "attachments/DCNOEOOH_SNZXOIRO.pdf"
+      },
+      {
+        "text": "호텔 예약 서류 2 (FKYZODBS)",
+        "url": "attachments/FKYZODBS.pdf"
+      },
+      {
+        "text": "호텔 예약 서류 3 (ERFSAVIH)",
+        "url": "attachments/ERFSAVIH.pdf"
+      }
     ]
   },
   "flight_departure": {
@@ -22,10 +33,10 @@
       { "label": "예약번호", "value": "5OD3MA(48708426)" },
       { "label": "출발지", "value": "인천국제공항 (ICN)" },
       { "label": "도착지", "value": "파리 샤를드골 공항 (CDG)" },
-      { "label": "출발 시간", "value": "2025-04-12 (토) 오전 10:45" },
-      { "label": "도착 시간", "value": "2025-04-12 (토) 오후 18:05" },
+      { "label": "출발 시간", "value": "2025년 4월 12일 (토) 오전 10시 45분" },
+      { "label": "도착 시간", "value": "2025년 4월 12일 (토) 오후 6시 5분" },
       { "label": "비행 시간", "value": "14시간 20분" },
-      { "label": "좌석", "value": "14시간 20분" }
+      { "label": "좌석", "value": "26A, 26B, 26C, 26D" }
     ],
     "links": [
       { "text": "E-티켓 (송호인)", "url": "attachments/E-ticket_9882487732801_(SONG_HOIN_MR).pdf" },
@@ -43,10 +54,10 @@
       { "label": "예약번호", "value": "5OD3MA(48708426)" },
       { "label": "출발지", "value": "파리 샤를드골 공항 (CDG)" },
       { "label": "도착지", "value": "인천국제공항 (ICN)" },
-      { "label": "출발 시간", "value": "2025-04-20 (일) 오후 20:05" },
-      { "label": "도착 시간", "value": "2025-04-20 (일) 오후 15:05" },
+      { "label": "출발 시간", "value": "2025년 4월 20일 (일) 오후 8시 5분" },
+      { "label": "도착 시간", "value": "2025년 4월 21일 (월) 오후 3시 5분" },
       { "label": "비행 시간", "value": "12시간" },
-      { "label": "좌석", "value": "12시간" }
+      { "label": "좌석", "value": "35H, 35J, 35K / 23E" }
     ],
     "links": [{ "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ502" }]
   },

@@ -5,13 +5,24 @@
     "content": [
       { "label": "Hotel Name", "value": "citizenM Paris La Défense" },
       { "label": "Address", "value": "194 Jard. de l'Arche, 92000 Nanterre, France" },
-      { "label": "Check-in", "value": "2:00 PM" },
-      { "label": "Check-out", "value": "11:00 AM" },
+      { "label": "Check-in", "value": "Saturday, April 12, 2025 – 2:00 PM" },
+      { "label": "Check-out", "value": "Sunday, April 20, 2025 – 11:00 AM" },
       { "label": "Contact", "value": "01 86 65 59 60" }
     ],
     "links": [
       { "text": "Map", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
-      { "text": "Hotel Booking Document", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" }
+      {
+        "text": "Hotel Reservation Document 1 (DCNOEOOH / SNZXOIRO)",
+        "url": "attachments/DCNOEOOH_SNZXOIRO.pdf"
+      },
+      {
+        "text": "Hotel Reservation Document 2 (FKYZODBS)",
+        "url": "attachments/FKYZODBS.pdf"
+      },
+      {
+        "text": "Hotel Reservation Document 3 (ERFSAVIH)",
+        "url": "attachments/ERFSAVIH.pdf"
+      }
     ]
   },
   "flight_departure": {
@@ -22,10 +33,10 @@
       { "label": "Booking Reference", "value": "5OD3MA(48708426)" },
       { "label": "From", "value": "Incheon International Airport (ICN)" },
       { "label": "To", "value": "Paris Charles de Gaulle Airport (CDG)" },
-      { "label": "Departure Time", "value": "2025-04-12 (Sat) 10:45 AM" },
-      { "label": "Arrival Time", "value": "2025-04-12 (Sat) 6:05 PM" },
+      { "label": "Departure Time", "value": "Saturday, April 12, 2025 – 10:45 AM" },
+      { "label": "Arrival Time", "value": "Saturday, April 12, 2025 – 6:05 PM" },
       { "label": "Flight Duration", "value": "14h 20m" },
-      { "label": "Seat", "value": "14h 20m" }
+      { "label": "Seats", "value": "26A, 26B, 26C, 26D" }
     ],
     "links": [
       { "text": "E-ticket", "url": "attachments/FKYZODBS_English_Check-in_Voucher_(For_Visa Application).pdf" },
@@ -40,10 +51,10 @@
       { "label": "Booking Reference", "value": "5OD3MA(48708426)" },
       { "label": "From", "value": "Paris Charles de Gaulle Airport (CDG)" },
       { "label": "To", "value": "Incheon International Airport (ICN)" },
-      { "label": "Departure Time", "value": "2025-04-20 (Sun) 8:05 PM" },
-      { "label": "Arrival Time", "value": "2025-04-21 (Mon) 3:05 PM" },
+      { "label": "Departure Time", "value": "Sunday, April 20, 2025 – 8:05 PM" },
+      { "label": "Arrival Time", "value": "Monday, April 21, 2025 – 3:05 PM" },
       { "label": "Flight Duration", "value": "12h" },
-      { "label": "Seat", "value": "12h" }
+      { "label": "Seats", "value": "35H, 35J, 35K / 23E" }
     ],
     "links": [{ "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ502" }]
   },
