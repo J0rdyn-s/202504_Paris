@@ -1,6 +1,18 @@
 ﻿[
   {
     "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 아침:",
+    "note_kr": null,
+    "event_en": "Breakfast:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
     "start": "1000",
     "end": "1230",
     "event_kr": "오르세 미술관",
@@ -13,6 +25,18 @@
   },
   {
     "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 점심:",
+    "note_kr": null,
+    "event_en": "Lunch:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
     "start": "1400",
     "end": "1600",
     "event_kr": "오랑주리 미술관",
@@ -21,6 +45,18 @@
     "note_en": null,
     "ticket": "attachments/Musée_de_l'Orangerie_Tickets_2506919687500400568.pdf",
     "map": "https://maps.app.goo.gl/AyDnFRmTyPkoC1Cj6",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 저녁:",
+    "note_kr": null,
+    "event_en": "Dinner:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
     "more": null
   },
   {

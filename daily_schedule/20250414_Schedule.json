@@ -1,5 +1,17 @@
 ﻿[
   {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 아침:",
+    "note_kr": null,
+    "event_en": "Breakfast:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
     "type": "info",
     "start": "0940",
     "end": "1020",

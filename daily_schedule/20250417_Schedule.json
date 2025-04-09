@@ -1,6 +1,18 @@
 ﻿[
   {
     "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 아침:",
+    "note_kr": null,
+    "event_en": "Breakfast:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
     "start": "0900",
     "end": "1300",
     "event_kr": "베르사유 궁전",
@@ -9,6 +21,18 @@
     "note_en": null,
     "ticket": "attachments/2025-04_Versailles_Tickets.pdf",
     "map": "https://maps.app.goo.gl/Gw5uDqFVFNHH3YwL6",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 점심:",
+    "note_kr": null,
+    "event_en": "Lunch:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
     "more": null
   },
   {

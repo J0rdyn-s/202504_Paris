@@ -1,6 +1,42 @@
 ﻿[
   {
     "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 아침:",
+    "note_kr": null,
+    "event_en": "Breakfast:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 점심:",
+    "note_kr": null,
+    "event_en": "Lunch:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🍽️ 저녁:",
+    "note_kr": null,
+    "event_en": "Dinner:",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "schedule",
     "start": "2005",
     "end": null,
     "event_kr": "✈️ 샤를 드 골 공항 T1 → 인천 공항 T1",
