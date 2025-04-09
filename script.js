@@ -52,10 +52,7 @@ function updateDateDisplay(date) {
   };
   const weekday = weekdays[currentLanguage][weekdayIndex];
   const dayOffset = index + (siteMeta.start_day || 0);
-  const label =
-    currentLanguage === "kr"
-      ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차`
-      : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
+  const label = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차` : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
   el.textContent = `📅 ${label} ▾`;
 }
 
@@ -106,7 +103,7 @@ function loadSchedule(date) {
                        <div class="event-title">${item[langKey]}</div>`;
 
         if (item[noteKey]) {
-          content += `<div>📝 ${item[noteKey]}</div>`;
+          content += `<div>${item[noteKey]}</div>`;
         }
 
         left.innerHTML = content;
@@ -231,10 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mobileList.innerHTML = "";
     dates.forEach((date, index) => {
       const li = document.createElement("li");
-      const dayLabel =
-        currentLanguage === "kr"
-          ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차`
-          : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
+      const dayLabel = currentLanguage === "kr" ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차` : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
       li.textContent = dayLabel;
       li.onclick = () => {
         mobileList.style.display = "none";
