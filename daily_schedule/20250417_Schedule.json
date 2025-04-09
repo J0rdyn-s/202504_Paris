@@ -64,9 +64,9 @@
     "start": "1700",
     "end": "1800",
     "event_kr": "파리 노트르담 대성당",
-    "note_kr": null,
+    "note_kr": "여권 지참",
     "event_en": "Cathédrale Notre-Dame de Paris",
-    "note_en": null,
+    "note_en": "Passport required",
     "ticket": null,
     "map": null,
     "more": null
