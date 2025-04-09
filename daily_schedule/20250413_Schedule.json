@@ -15,7 +15,7 @@
     "type": "schedule",
     "start": "0900",
     "end": "1000",
-    "event_kr": "셰 알랭 먐먐 샌드위치",
+    "event_kr": "🍽️ 셰 알랭 먐먐 샌드위치",
     "note_kr": "아침 식사: 샌드위치 / 9시 오픈",
     "event_en": "Chez Alain Miam Miam",
     "note_en": "Breakfast: Sandwich / Opens at 9 AM",
@@ -98,13 +98,25 @@
   {
     "type": "schedule",
     "start": "1915",
-    "end": "2115",
-    "event_kr": "저녁식사: 셰 안드레",
+    "end": "2100",
+    "event_kr": "🍽️ 저녁식사: 셰 안드레",
     "note_kr": "예약 완료",
     "event_en": "Dinner: Chez André",
     "note_en": "Reservation confirmed",
     "ticket": null,
     "map": "https://maps.app.goo.gl/P5Cxzt8CexKkKCLD6",
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "2100",
+    "end": "2140",
+    "event_kr": "🚊 셰 안드레 → 호텔",
+    "note_kr": "약 30분 소요 예정",
+    "event_en": "🚊 Chez André → Hotel",
+    "note_en": "Approx. 30 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/GwpTVHgGjntvJFk87",
     "more": null
   }
 ]
