@@ -97,6 +97,7 @@
       { "phrase": "실례합니다", "translation": "Excusez-moi" },
       { "phrase": "화장실이 어디예요?", "translation": "Où sont les toilettes ?" },
       { "phrase": "이거 얼마예요?", "translation": "C’est combien ?" },
+      { "phrase": "숫자로 써서 보여주세요.", "translation": "Écrivez-le en chiffres, s’il vous plaît." },
       { "phrase": "영어 하세요?", "translation": "Parlez-vous anglais ?" },
       { "phrase": "도와주세요", "translation": "Aidez-moi, s’il vous plaît" },
       { "phrase": "길을 잃었어요", "translation": "Je suis perdu(e)" },
