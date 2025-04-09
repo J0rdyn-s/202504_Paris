@@ -1,20 +1,20 @@
 ﻿[
   {
     "type": "schedule",
-    "start": "0900",
-    "end": "1130",
+    "start": "0700",
+    "end": "0900",
     "event_kr": "지수 메이크업 리허설",
-    "note_kr": "엘리 & 아빠 헬스장",
+    "note_kr": "엘리 & 아빠 개인 일정, 이후 엘리 아빠 픽업 예정",
     "event_en": "Jisu Makeup Trial",
-    "note_en": "Eli & Dad at Gym",
+    "note_en": "Eli and Dad have personal plans; pick-up scheduled afterwards",
     "ticket": null,
     "map": "https://maps.app.goo.gl/wzPcm4HVbkVvoQpA8",
     "more": null
   },
   {
     "type": "info",
-    "start": "1000",
-    "end": "1030",
+    "start": "0910",
+    "end": "1000",
     "event_kr": "🚊 호텔 → 드레스 샵",
     "note_kr": "40분 소요 예상",
     "event_en": "🚊 Citizen M → White Boutik",
@@ -25,8 +25,8 @@
   },
   {
     "type": "schedule",
-    "start": "1300",
-    "end": "1330",
+    "start": "1000",
+    "end": "1030",
     "event_kr": "화이트 부티크: 웨딩드레스 최종 피팅",
     "note_kr": null,
     "event_en": "White Boutik: Final Wedding Dress Fitting",
