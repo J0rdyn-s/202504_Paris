@@ -98,6 +98,14 @@ body {
   background-color: #f7fafc;
 }
 
+ul#mobileDateList li.today {
+  background-color: #fff9db; /* soft yellow */
+  font-weight: 500;
+  border-left: 4px solid #facc15; /* warm yellow */
+  padding-left: 8px;
+  border-radius: 4px;
+}
+
 .schedule {
   padding: 20px;
   max-width: 800px;
