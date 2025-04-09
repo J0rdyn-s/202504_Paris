@@ -29,11 +29,6 @@ async function loadLanguageProperties(lang) {
   );
 }
 
-const buttonLabels = {
-  en: { ticket: "🎟️ Ticket", map: "🗺️ Map", more: "🔗 More Info" },
-  kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" },
-};
-
 function generateDates(startStr, endStr) {
   const startDate = new Date(startStr);
   const endDate = new Date(endStr);
@@ -117,7 +112,7 @@ function loadSchedule(date) {
 
         const start = formatTime(item.start, currentLanguage);
         const end = formatTime(item.end, currentLanguage);
-        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ""}` : `[Time TBA]`;
+        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ""}` : translations["tba"] || "[Time TBA]";
 
         let content = `<div class="time-block">${timeStr}</div>
                        <div class="event-title">${item[langKey]}</div>`;
@@ -133,7 +128,7 @@ function loadSchedule(date) {
           btn.href = item.ticket;
           btn.target = "_blank";
           btn.className = "schedule-button ticket-link";
-          btn.textContent = buttonLabels[currentLanguage].ticket;
+          btn.textContent = translations["ticket"] || "Ticket";
           right.appendChild(btn);
         }
 
@@ -142,7 +137,7 @@ function loadSchedule(date) {
           btn.href = item.map;
           btn.target = "_blank";
           btn.className = "schedule-button map-link";
-          btn.textContent = buttonLabels[currentLanguage].map;
+          btn.textContent = translations["map"] || "Map";
           right.appendChild(btn);
         }
 
@@ -151,7 +146,7 @@ function loadSchedule(date) {
           btn.href = item.more;
           btn.target = "_blank";
           btn.className = "schedule-button more-link";
-          btn.textContent = buttonLabels[currentLanguage].more;
+          btn.textContent = translations["more"] || "More Info";
           right.appendChild(btn);
         }
 
