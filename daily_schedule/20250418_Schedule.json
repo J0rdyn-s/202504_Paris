@@ -1,5 +1,17 @@
 ﻿[
   {
+    "type": "info",
+    "start": null,
+    "end": null,
+    "event_kr": "🚊 호텔 → 루브르 박물관",
+    "note_kr": "약 30분 소요 예정",
+    "event_en": "🚊 Hotel → Louvre Museum",
+    "note_en": "Approx. 30 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/mZWCN8rfdaJCemaD9",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": null,
     "end": null,

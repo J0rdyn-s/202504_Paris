@@ -96,6 +96,18 @@
     "more": null
   },
   {
+    "type": "info",
+    "start": null,
+    "end": null,
+    "event_kr": "🚊 갤러리 라파예트 → 셰 안드레",
+    "note_kr": "약 20분 소요 예정 / 👟 도보 35분 소요",
+    "event_en": "🚊 Galeries Lafayette → Chez André",
+    "note_en": "Approx. 20 min / 👟 35 min Walk",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/nyAwXt4rZzysLw2M6",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": "1915",
     "end": "2100",

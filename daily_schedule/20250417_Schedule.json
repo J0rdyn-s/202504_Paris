@@ -12,8 +12,20 @@
     "more": null
   },
   {
+    "type": "info",
+    "start": "0720",
+    "end": "0830",
+    "event_kr": "🚊 호텔 → 베르사유 궁전",
+    "note_kr": "약 1시간 소요 예정",
+    "event_en": "🚊 Hotel → Palace of Versailles",
+    "note_en": "Approx. 1 hr",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/g2LXj5gAKnnVXeNw7",
+    "more": null
+  },
+  {
     "type": "schedule",
-    "start": "0900",
+    "start": "0830",
     "end": "1300",
     "event_kr": "베르사유 궁전",
     "note_kr": null,
