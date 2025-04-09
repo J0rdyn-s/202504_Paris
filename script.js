@@ -6,8 +6,8 @@ let startDay = 0;
 let isDropdownOpen = false;
 
 const todayStr = (() => {
-  // const today = new Date();
-  const today = new Date("2025-04-14"); // 🧪 Change to any date you *do* have to test
+  const today = new Date();
+  // const today = new Date("2025-04-14"); // 🧪 Change to any date you *do* have to test
 
   return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}`;
 })();
@@ -293,8 +293,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   async function findFirstAvailableDate(dates) {
-    //const today = new Date();
-    const today = new Date("2025-04-14"); // 🧪 Change to any date you *do* have to test
+    const today = new Date();
+    // const today = new Date("2025-04-14"); // 🧪 Change to any date you *do* have to test
 
     const todayStr = `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}`;
 
