@@ -18,7 +18,7 @@
     "event_kr": "🚊 서울역 → 인천공항 T1",
     "note_kr": "1시간 소요 예상 / 9시 43분, 51분, 59분 공항철도 탑승",
     "event_en": "🚊 Seoul Station → ICN T1",
-    "note_en": "Estimated 1 hour",
+    "note_en": "Approx. 1 hr",
     "ticket": null,
     "map": null,
     "more": null
@@ -27,12 +27,12 @@
     "type": "schedule",
     "start": "2300",
     "end": null,
-    "event_kr": "다락휴 인천공항 T1",
-    "note_kr": null,
-    "event_en": "Capsule Hotel 'Darakhyu' ICN T1",
+    "event_kr": "🛏️ 호텔 체크인: 다락휴 인천공항 T1",
+    "note_kr": "다음날 오전 6시 체크아웃 예정</br>예약번호: 8426000285 / 8426000286",
+    "event_en": "🛏️ Hotel Check-in: Capsule Hotel 'Darakhyu' ICN T1",
     "note_en": null,
     "ticket": null,
-    "map": null,
+    "map": "https://place.map.kakao.com/612917753",
     "more": null
   }
 ]

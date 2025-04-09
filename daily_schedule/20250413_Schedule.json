@@ -4,9 +4,9 @@
     "start": "0800",
     "end": "0850",
     "event_kr": "🚊 호텔 → 셰 알랭 먐먐 샌드위치",
-    "note_kr": "약 50분 소요 예정",
+    "note_kr": "약 50분 소요 예상",
     "event_en": "🚊 Hotel → Chez Alain Miam Miam",
-    "note_en": "Estimated 50 minutes",
+    "note_en": "Approx. 50 min",
     "ticket": null,
     "map": "https://maps.app.goo.gl/dBhsca1LcPWSAnTy5",
     "more": null

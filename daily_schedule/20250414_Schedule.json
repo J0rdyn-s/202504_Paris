@@ -1,5 +1,17 @@
 ﻿[
   {
+    "type": "info",
+    "start": "0940",
+    "end": "1020",
+    "event_kr": "🚊 Hotel → Chaumet Vendôme",
+    "note_kr": "약 30분 소요 예상",
+    "event_en": "🚊 Hotel → Chaumet Vendôme",
+    "note_en": "Approx. 30 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/QZ51rknkQPEadvU28",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": "1030",
     "end": "1130",
@@ -9,6 +21,18 @@
     "note_en": "Scheduled to retrieve wedding ring",
     "ticket": null,
     "map": "https://maps.app.goo.gl/Sz8qDUpBUSybfddP9",
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "1030",
+    "end": "1130",
+    "event_kr": "👟 쇼메 → 식당",
+    "note_kr": "약 15분 소요 예상",
+    "event_en": "👟 Chaumet → Restaurant",
+    "note_en": "Approx. 15 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/eckbx3xdaNnTxqzz7",
     "more": null
   },
   {
