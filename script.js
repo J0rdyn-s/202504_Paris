@@ -12,6 +12,23 @@ const todayStr = (() => {
   return `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}`;
 })();
 
+let translations = {}; // ✅ Global now
+
+async function loadLanguageProperties(lang) {
+  const response = await fetch(`properties_${lang}.properties`);
+  const text = await response.text();
+
+  translations = Object.fromEntries(
+    text
+      .split("\n")
+      .filter((line) => line && !line.startsWith("#"))
+      .map((line) => {
+        const [key, ...valParts] = line.split("=");
+        return [key.trim(), valParts.join("=").trim()];
+      })
+  );
+}
+
 const buttonLabels = {
   en: { ticket: "🎟️ Ticket", map: "🗺️ Map", more: "🔗 More Info" },
   kr: { ticket: "🎟️ 티켓", map: "🗺️ 지도", more: "🔗 자세히 보기" },
@@ -53,11 +70,7 @@ function updateDateDisplay(date) {
   const month = date.substring(4, 6);
   const day = date.substring(6, 8);
   const weekdayIndex = new Date(`${year}-${month}-${day}`).getDay();
-  const weekdays = {
-    en: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-    kr: ["일", "월", "화", "수", "목", "금", "토"],
-  };
-  const weekday = weekdays[currentLanguage][weekdayIndex];
+  const weekday = translations[`weekday_${weekdayIndex}`];
   const dayOffset = index + (siteMeta.start_day || 0);
   const label = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${dayOffset}일차` : `${year}-${month}-${day}(${weekday}): Day ${dayOffset}`;
   el.textContent = `📅 ${label} ▾`;
@@ -171,11 +184,14 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fetch and process the page meta data
   fetch("page_meta.json")
     .then((res) => res.json())
-    .then((data) => {
+    .then(async (data) => {
       try {
         siteMeta = data;
         startDay = data.start_day || 0;
         currentLanguage = data.default_language || "kr";
+
+        // ✅ Load language labels
+        await loadLanguageProperties(currentLanguage);
 
         // ✅ Sync language dropdown
         languageSelect.value = currentLanguage;
@@ -230,14 +246,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ✅ Language selector event
-  languageSelect.addEventListener("change", (e) => {
+  languageSelect.addEventListener("change", async (e) => {
     currentLanguage = e.target.value;
+    await loadLanguageProperties(currentLanguage);
 
-    // Update title, footer, and author
     siteTitle.textContent = siteMeta[`title_${currentLanguage}`] || "";
     footerText.textContent = siteMeta[`footer_${currentLanguage}`] || "";
 
-    // Update date label and rebuild mobile list
     if (currentDate) {
       updateDateDisplay(currentDate);
       loadSchedule(currentDate);
@@ -249,17 +264,17 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Reusable date list builder
   function buildDateList() {
     mobileList.innerHTML = "";
-    const weekdays = {
-      en: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      kr: ["일", "월", "화", "수", "목", "금", "토"],
-    };
 
     dates.forEach((date, index) => {
       const year = date.slice(0, 4);
       const month = date.slice(4, 6);
       const day = date.slice(6, 8);
       const weekdayIndex = new Date(`${year}-${month}-${day}`).getDay();
-      const weekday = weekdays[currentLanguage][weekdayIndex];
+      const weekday = translations[`weekday_${weekdayIndex}`] || `?${weekdayIndex}`;
+      if (!translations[`weekday_${weekdayIndex}`]) {
+        console.warn(`⚠️ Missing weekday_${weekdayIndex} in translations`);
+      }
+
       const offset = index + (siteMeta.start_day || 0);
 
       const dayLabel = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${offset}일차` : `${year}-${month}-${day}(${weekday}): Day ${offset}`;
