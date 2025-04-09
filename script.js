@@ -226,10 +226,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Reusable date list builder
   function buildDateList() {
     mobileList.innerHTML = "";
+    const weekdays = {
+      en: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      kr: ["일", "월", "화", "수", "목", "금", "토"],
+    };
+
     dates.forEach((date, index) => {
+      const year = date.slice(0, 4);
+      const month = date.slice(4, 6);
+      const day = date.slice(6, 8);
+      const weekdayIndex = new Date(`${year}-${month}-${day}`).getDay();
+      const weekday = weekdays[currentLanguage][weekdayIndex];
+      const offset = index + (siteMeta.start_day || 0);
+
+      const dayLabel = currentLanguage === "kr" ? `${year}-${month}-${day}(${weekday}): ${offset}일차` : `${year}-${month}-${day}(${weekday}): Day ${offset}`;
+
       const li = document.createElement("li");
-      const dayLabel = currentLanguage === "kr" ? `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: ${index + startDay}일차` : `${date.slice(0, 4)}-${date.slice(4, 6)}-${date.slice(6)}: Day ${index + startDay}`;
-      li.textContent = dayLabel;
+      li.textContent = `${dayLabel}`;
       li.onclick = () => {
         mobileList.style.display = "none";
         loadSchedule(date);
