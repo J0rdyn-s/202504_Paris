@@ -117,7 +117,17 @@ function loadSchedule(date) {
 
         const start = formatTime(item.start, currentLanguage);
         const end = formatTime(item.end, currentLanguage);
-        const timeStr = item.start ? `${start}${end ? ` – ${end}` : ""}` : translations["tba"] || "[Time TBA]";
+        let timeStr = "";
+
+        if (item.start && item.end) {
+          timeStr = `${start} – ${end}`;
+        } else if (item.start) {
+          timeStr = start;
+        } else if (item.end) {
+          timeStr = currentLanguage === "kr" ? `– ${end}` : `– ${end}`;
+        } else {
+          timeStr = translations["tba"] || "[Time TBA]";
+        }
 
         let content = `<div class="time-block">${timeStr}</div>
                        <div class="event-title">${item[langKey]}</div>`;
