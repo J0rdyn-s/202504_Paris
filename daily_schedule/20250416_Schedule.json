@@ -34,5 +34,17 @@
     "ticket": null,
     "map": "https://maps.app.goo.gl/jxRKcQXoZrtwxSZD7",
     "more": null
+  },
+  {
+    "type": "info",
+    "start": "2130",
+    "end": "2200",
+    "event_kr": "🚊 개선문 → 호텔",
+    "note_kr": "약 25분 소요 예정",
+    "event_en": "🚊 Arc de Triomphe → Hotel",
+    "note_en": "Approx. 25 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/JmzCWWxeVHjvugMLA",
+    "more": null
   }
 ]

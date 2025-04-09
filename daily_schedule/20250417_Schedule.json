@@ -46,5 +46,17 @@
     "ticket": null,
     "map": "https://maps.app.goo.gl/RrrX8YmL6xCT8eru8",
     "more": null
+  },
+  {
+    "type": "info",
+    "start": "2110",
+    "end": "2200",
+    "event_kr": "🚌 에 또끄 → 호텔",
+    "note_kr": "약 30분 소요 예정 / 144번 버스",
+    "event_en": "🚌 Et Toque → Hotel",
+    "note_en": "Approx. 30 min / Bus No. 144",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/i1rjrQ2d9LP9ZZqb7",
+    "more": null
   }
 ]

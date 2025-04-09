@@ -39,12 +39,12 @@
     "type": "schedule",
     "start": "2100",
     "end": "2300",
-    "event_kr": "결혼식 피로연",
-    "note_kr": "장소: 마르그리트 1606",
-    "event_en": "Wedding Reception",
-    "note_en": "Venue: MARGUERITE 1606",
+    "event_kr": "🚕 마르그리트 1606 → 호텔",
+    "note_kr": "우버 탑승 예정, 약 40분 소요 예상",
+    "event_en": "🚕 MARGUERITE 1606 → Hotel",
+    "note_en": "By Uber, Approx. 40 min",
     "ticket": null,
-    "map": "https://maps.app.goo.gl/EYkpVRqT92rom3j88",
+    "map": "https://maps.app.goo.gl/pwJgSszbcj4Cgb719",
     "more": null
   }
 ]

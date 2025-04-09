@@ -106,5 +106,17 @@
     "ticket": null,
     "map": "https://maps.app.goo.gl/kQ8z7mymdegJhvou6",
     "more": null
+  },
+  {
+    "type": "info",
+    "start": "2110",
+    "end": "2200",
+    "event_kr": "🚊 바토 파리지앵 → 호텔",
+    "note_kr": "약 50분 소요 예정",
+    "event_en": "🚊 Bateaux Parisiens → Hotel",
+    "note_en": "Approx. 50 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/y8otihXSAUL3NEe27",
+    "more": null
   }
 ]

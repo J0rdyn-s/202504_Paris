@@ -28,9 +28,9 @@
     "start": "1030",
     "end": "1130",
     "event_kr": "👟 쇼메 → 식당",
-    "note_kr": "약 15분 소요 예상",
+    "note_kr": "약 15분 소요 예상 / 파사쥬 등 간단히 구경 예정",
     "event_en": "👟 Chaumet → Restaurant",
-    "note_en": "Approx. 15 min",
+    "note_en": "Approx. 15 min / Includes brief sightseeing (passages)",
     "ticket": null,
     "map": "https://maps.app.goo.gl/eckbx3xdaNnTxqzz7",
     "more": null
@@ -84,6 +84,18 @@
     "more": null
   },
   {
+    "type": "info",
+    "start": "1640",
+    "end": "1710",
+    "event_kr": "🚊 알렉상드르 3세 다리 → 셰 부용 피갈",
+    "note_kr": "약 30분 소요 예상",
+    "event_en": "🚊 Pont Alexandre III → Chez Bouillon Pigalle",
+    "note_en": "Approx. 30 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/Vv4YhyGuo4Z7m2AL6",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": "1730",
     "end": "1845",
@@ -96,6 +108,18 @@
     "more": null
   },
   {
+    "type": "info",
+    "start": "1900",
+    "end": "1915",
+    "event_kr": "👟 셰 부용 피갈 → 몽마르트 언덕",
+    "note_kr": "약 15분 소요 예상",
+    "event_en": "👟 Chez Bouillon Pigalle → Montmartre",
+    "note_en": "Approx. 15 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/3KwwMJieKgnJAuAX6",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": "1915",
     "end": "2015",
@@ -105,6 +129,18 @@
     "note_en": "Sunset at 20:41",
     "ticket": null,
     "map": "https://maps.app.goo.gl/Hd6qAzjfKatpogfX8",
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "1915",
+    "end": "2015",
+    "event_kr": "🚊 몽마르트 언덕 → 호텔",
+    "note_kr": "약 50분 소요 예상",
+    "event_en": "🚊 Montmartre → Hotel",
+    "note_en": "Approx. 50 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/HJcgyvZHf9YhwWsR9",
     "more": null
   }
 ]

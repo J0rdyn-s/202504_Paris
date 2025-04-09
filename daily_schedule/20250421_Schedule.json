@@ -10,5 +10,29 @@
     "ticket": null,
     "map": "https://maps.app.goo.gl/xf1EaNcPJwffMNteA",
     "more": null
+  },
+  {
+    "type": "info",
+    "start": "1648",
+    "end": "1731",
+    "event_kr": "🚊 인천공항 → 서울역",
+    "note_kr": "공항철도 직통 열차 탑승, 약 43분 소요 예정",
+    "event_en": "🚊 Incheon Airport → Seoul Station",
+    "note_en": "Approx. 43min",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "1758",
+    "end": "1857",
+    "event_kr": "🚄  서울역 → 대전역",
+    "note_kr": "KTX 053, 11호차 14 A, B, C",
+    "event_en": "🚄  Seoul Station → Daejeon Station",
+    "note_en": "KTX 053, Car 11, Seats 14 A, B, C",
+    "ticket": null,
+    "map": null,
+    "more": null
   }
 ]
