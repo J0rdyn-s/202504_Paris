@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Info</title>
+    <link rel="stylesheet" href="css/detail.css" />
+    <script src="js/lang-switch.js" defer></script>
+  </head>
+  <body>
+    <div class="top-bar">
+      <button class="back-btn" onclick="history.back()">◀</button>
+      <div class="page-title">Detailed Info</div>
+      <div class="language-toggle">
+        <button onclick="switchLanguage()">🌐</button>
+      </div>
+    </div>
+
+    <main class="detail-content">
+      <h1>Welcome to the Travel Detail Page</h1>
+      <p>This page can contain anything: text, images, videos, links, buttons, and more.</p>
+
+      <h2>Highlights</h2>
+      <ul>
+        <li>📍 Landmark: Louvre Museum</li>
+        <li>⏰ Time: 2:00 PM</li>
+        <li>🎫 Tickets: Available online</li>
+      </ul>
+
+      <h3>Photo Gallery</h3>
+      <img src="assets/louvre.jpg" alt="Louvre Museum" class="responsive-img" />
+
+      <h3>Booking Info</h3>
+      <button class="primary-btn" onclick="window.open('https://tickets.example.com')">Buy Tickets</button>
+
+      <h4>Need help?</h4>
+      <p>Contact our travel concierge via <a href="mailto:support@example.com">email</a>.</p>
+
+      <h5>Tips</h5>
+      <div class="tip-box">
+        ☀️ Arrive early to avoid crowds.<br />
+        👜 Bags may be inspected at the entrance.
+      </div>
+
+      <h6>Last updated: April 2025</h6>
+    </main>
+  </body>
+</html>
