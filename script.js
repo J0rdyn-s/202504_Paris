@@ -188,11 +188,18 @@ document.addEventListener("DOMContentLoaded", () => {
         // ✅ Build date list
         buildDateList();
 
-        // ✅ Load the first date by default
-        loadSchedule(dates[0]);
-        updateDateDisplay(dates[0]);
-        currentDate = dates[0]; // <— Add this line if it's missing
-        updateNavButtons();
+        // ✅ Try today's date first; fallback to first available
+        findFirstAvailableDate(dates).then((validDate) => {
+          if (validDate) {
+            currentDate = validDate;
+            loadSchedule(validDate);
+            updateDateDisplay(validDate);
+            updateNavButtons();
+          } else {
+            console.error("🚨 No available JSON file found for any date.");
+            document.getElementById("schedule").innerHTML = "<p>⚠️ No schedule available.</p>";
+          }
+        });
       } catch (e) {
         console.error("🚨 Error processing site meta:", e);
       }
@@ -275,5 +282,26 @@ document.addEventListener("DOMContentLoaded", () => {
       startDate.setDate(startDate.getDate() + 1);
     }
     return result;
+  }
+
+  async function findFirstAvailableDate(dates) {
+    const today = new Date();
+    //const today = new Date("2025-04-14"); // 🧪 Change to any date you *do* have to test
+
+    const todayStr = `${today.getFullYear()}${String(today.getMonth() + 1).padStart(2, "0")}${String(today.getDate()).padStart(2, "0")}`;
+
+    // Step 1: Try today's date first
+    const priorityDates = dates.includes(todayStr) ? [todayStr, ...dates.filter((d) => d !== todayStr)] : dates;
+
+    for (const date of priorityDates) {
+      try {
+        const res = await fetch(`daily_schedule/${date}_Schedule.json`, { method: "HEAD" });
+        if (res.ok) return date;
+      } catch (err) {
+        // Ignore failed fetch
+      }
+    }
+
+    return null; // nothing found
   }
 });
