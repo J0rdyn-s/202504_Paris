@@ -68,12 +68,12 @@ body {
 }
 
 /* Go to Schedule Button Styling */
-.to-schedule {
+.to-page {
   margin-top: 20px;
   text-align: center; /* Center align the button */
 }
 
-.to-schedule-button {
+.to-page-button {
   cursor: pointer;
   background-color: #007bff; /* Blue color for the button */
   color: white;
@@ -89,11 +89,11 @@ body {
   margin-bottom: 20px; /* Adds space below the button */
 }
 
-.to-schedule-button:hover {
+.to-page-button:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
-.to-schedule-button:focus {
+.to-page-button:focus {
   outline: none; /* Removes focus outline */
 }
 

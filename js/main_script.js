@@ -51,6 +51,7 @@ function updateUI(properties) {
   const showMoreText = properties["show_more_button"] || "Show More";
   const showLessText = properties["show_less_button"] || "Show Less";
   const goToScheduleText = properties["go_to_schedule_button"] || "Go to Schedule";
+  const goToWishlistText = properties["go_to_wishlist_button"] || "Go to Wishlist";
 
   // Store translated strings globally for later use in renderSections
   window.translatedText = {
@@ -80,6 +81,10 @@ function updateUI(properties) {
   const scheduleBtn = document.getElementById("toSchedule");
   if (scheduleBtn) {
     scheduleBtn.textContent = goToScheduleText;
+  }
+  const wishlistBtn = document.getElementById("toWishlist");
+  if (wishlistBtn) {
+    wishlistBtn.textContent = goToWishlistText;
   }
 }
 
@@ -129,9 +134,7 @@ function renderSections(data) {
 
       toggleBtn.onclick = () => {
         hiddenDiv.classList.toggle("hidden");
-        toggleBtn.textContent = hiddenDiv.classList.contains("hidden")
-          ? (window.translatedText && window.translatedText.showMoreText) || "More Info"
-          : (window.translatedText && window.translatedText.showLessText) || "Less Info";
+        toggleBtn.textContent = hiddenDiv.classList.contains("hidden") ? (window.translatedText && window.translatedText.showMoreText) || "More Info" : (window.translatedText && window.translatedText.showLessText) || "Less Info";
       };
 
       section.appendChild(toggleBtn);
@@ -155,6 +158,12 @@ function renderSections(data) {
 }
 
 // Schedule page redirection
-document.getElementById("toSchedule").addEventListener("click", () => {
-  window.location.href = "index.html";
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("toSchedule")?.addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
+
+  document.getElementById("toWishlist")?.addEventListener("click", () => {
+    window.location.href = "html/wishlist.html";
+  });
 });

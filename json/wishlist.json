@@ -1,0 +1,67 @@
+[
+  {
+    "category_kr": "🏛️ 랜드마크 & 명소",
+    "category_en": "🏛️ Landmarks & Sights",
+    "items": [
+      { "name_kr": "에펠탑", "name_en": "Eiffel Tower", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "개선문 (284 계단)", "name_en": "Arc de Triomphe (284 steps)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "콩코드 광장", "name_en": "Place de la Concorde", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "노트르담 대성당(예약 필요, 여권필수)", "name_en": "Notre-Dame Cathedral (reservation & passport required)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "알렉상드르 3세 다리", "name_en": "Pont Alexandre III", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "샹젤리제 거리", "name_en": "Champs-Élysées", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "몽마르트 언덕", "name_en": "Montmartre Hill", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "튈르리 정원", "name_en": "Tuileries Garden", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "방돔 광장", "name_en": "Place Vendôme", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "파사쥬", "name_en": "Passage (covered arcade)", "note_kr": "", "note_en": "", "status": "p" }
+    ]
+  },
+  {
+    "category_kr": "🖼️ 박물관 & 미술관",
+    "category_en": "🖼️ Museums & Galleries",
+    "items": [
+      { "name_kr": "오르세 미술관(고흐, 기존 기차역)", "name_en": "Musée d'Orsay (Van Gogh, former station)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "오랑주리 미술관(모네)", "name_en": "Musée de l'Orangerie (Monet)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "루브르 박물관", "name_en": "Louvre Museum", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "퐁피두 센터(공사 일정 확인 필요)", "name_en": "Pompidou Center (check renovation schedule)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "베르사유 궁전\n화/주말 피하기, 사전 예약 필요, 거울의방 가고싶음", "name_en": "Palace of Versailles (avoid Tue/weekends, book ahead, visit Hall of Mirrors)", "note_kr": "", "note_en": "", "status": "p" }
+    ]
+  },
+  {
+    "category_kr": "🎭 문화 & 체험",
+    "category_en": "🎭 Cultural & Experiences",
+    "items": [
+      { "name_kr": "바토무슈(저녁 시간) or 바토 파리지앵", "name_en": "Bateaux Mouches (evening) or Bateaux Parisiens", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "오페라 가르니에", "name_en": "Opéra Garnier", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "마레지구", "name_en": "Le Marais district", "note_kr": "", "note_en": "", "status": "p" }
+    ]
+  },
+  {
+    "category_kr": "🛍️ 쇼핑 & 기타",
+    "category_en": "🛍️ Shopping & Others",
+    "items": [
+      { "name_kr": "갤러리 라파예트(에펠탑 뷰, 쇼핑) -> 수 or 목", "name_en": "Galeries Lafayette (Eiffel view, shopping – Wed/Thu)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "치즈가게", "name_en": "Cheese shop", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "약국", "name_en": "Pharmacy", "note_kr": "", "note_en": "", "status": "p" }
+    ]
+  },
+  {
+    "category_kr": "🍽️ 먹고 싶은 음식",
+    "category_en": "🍽️ Foods to Try",
+    "items": [
+      { "name_kr": "오리 콩피", "name_en": "Duck confit", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "푸아그라", "name_en": "Foie gras", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "에스카르고", "name_en": "Escargot", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "라따뚜이", "name_en": "Ratatouille", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "에스프레소", "name_en": "Espresso", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "버터쿠키", "name_en": "Butter cookies", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "크림브륄레", "name_en": "Crème brûlée", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "와인", "name_en": "Wine", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "바게뜨/크로와상", "name_en": "Baguette/Croissant", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "까눌레", "name_en": "Canelé", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "마카롱(피에르에르메)", "name_en": "Macaron (Pierre Hermé)", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "에끌레어", "name_en": "Éclair", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "크레이프", "name_en": "Crêpe", "note_kr": "", "note_en": "", "status": "p" },
+      { "name_kr": "감자튀김", "name_en": "French fries", "note_kr": "", "note_en": "", "status": "p" }
+    ]
+  }
+]

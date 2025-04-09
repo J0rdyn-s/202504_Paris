@@ -1,0 +1,52 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.status {
+  display: inline-block;
+  width: 1.8em; /* reserve space for ✅ / ❌ / ⬜ */
+  text-align: center;
+  font-size: 16px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.d {
+  background-color: #38a169; /* green-500 */
+  color: #fff;
+}
+
+.p {
+  background-color: #f6ad55; /* orange-400 */
+  color: #fff;
+}
+
+.c {
+  background-color: #e53e3e; /* red-600 */
+  color: #fff;
+}
+
+.note {
+  display: block;
+  font-size: 13px;
+  color: #718096;
+  margin-top: 2px;
+  margin-left: 1.25rem;
+}
+.status {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+  margin-right: 8px; /* was margin-left before */
+  vertical-align: middle;
+}
