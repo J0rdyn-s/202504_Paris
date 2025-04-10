@@ -33,9 +33,11 @@ function renderTickets(tickets) {
     const startStr = ticket.start_time ? formatTime(ticket.start_time) : "";
     const endStr = ticket.end_time ? formatTime(ticket.end_time) : "";
 
-    const durationStr = ticket.start_time && ticket.end_time ? ` (${calculateDuration(ticket.start_time, ticket.end_time)})` : "";
+    const durationValue = ticket.start_time && ticket.end_time ? calculateDuration(ticket.start_time, ticket.end_time) : "";
 
-    let datetimeLine = dateStr;
+    const durationStr = durationValue ? ` <span class="duration">(⏱️ ${durationValue}</span>)` : "";
+
+    let datetimeLine = `<strong>${dateStr}</strong>`;
     if (startStr || endStr) {
       datetimeLine += " ";
       datetimeLine += startStr || "-";
@@ -85,12 +87,20 @@ function calculateDuration(start, end) {
   const endMin = parseInt(end.slice(2, 4), 10);
 
   let durationMin = endHour * 60 + endMin - (startHour * 60 + startMin);
-  if (durationMin < 0) durationMin += 1440; // overnight fix
+  if (durationMin < 0) durationMin += 1440; // handle overnight cases
 
   const hours = Math.floor(durationMin / 60);
   const minutes = durationMin % 60;
 
-  return `${hours ? `${hours}h ` : ""}${minutes}m`;
+  if (currentLanguage === "kr") {
+    const hourText = hours > 0 ? `${hours}${i18n["hour"] || "시간"}` : "";
+    const minText = minutes > 0 ? `${minutes}${i18n["minute"] || "분"}` : "";
+    return `${hourText}${hourText && minText ? " " : ""}${minText}`;
+  } else {
+    const hourText = hours > 0 ? `${hours}h` : "";
+    const minText = minutes > 0 ? `${minutes}m` : "";
+    return `${hourText}${hourText && minText ? " " : ""}${minText}`;
+  }
 }
 
 async function switchLanguage() {
