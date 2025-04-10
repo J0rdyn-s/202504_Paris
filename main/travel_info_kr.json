@@ -88,6 +88,21 @@
     ],
     "links": [{ "text": "해외여행자보험 가입증명서", "url": "../attachments/insurance.pdf" }]
   },
+  "sim_info": {
+    "title": "📞 유심 설치 정보",
+    "hidden": false,
+    "content": [
+      { "label": "데이터 제공량", "value": "매일 1GB" },
+      { "label": "사용 기간", "value": "9일" },
+      { "label": "고객센터", "value": "카카오톡: @와이파이도시락" }
+    ],
+    "links": [
+      { "text": "갤럭시 설치 방법", "url": "https://bit.ly/guide-AOS" },
+      { "text": "아이폰 설치 방법", "url": "https://bit.ly/guide-IOS" },
+      { "text": "송호인(Esim)", "url": "../attachments/ect/hoin_esim.PNG" },
+      { "text": "황미순(Esim)", "url": "../attachments/ect/misoon_esim.PNG" }
+    ]
+  },
   "basic_phrases": {
     "title": "💬 기초 회화",
     "hidden": true,
