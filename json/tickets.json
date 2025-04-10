@@ -1,44 +1,35 @@
 [
   {
-    "place": "orsay",
-    "date": "20250415",
-    "start_time": "1000",
-    "end_time": "1100",
-    "name_kr": "송지수",
-    "name_en": "Jisu Song",
-    "file": "../tickets/orsay_jisu.pdf",
-    "note_kr": "스마트폰 QR 확인 가능",
-    "note_en": "QR code works on mobile"
-  },
-  {
-    "place": "orsay",
-    "date": "20250415",
-    "start_time": "1000",
-    "end_time": "1100",
+    "place": "arex",
+    "date": "20250421",
+    "start_time": "1648",
+    "end_time": "1731",
     "name_kr": "송호인",
     "name_en": "Hoin Song",
-    "file": "../tickets/orsay_hoyin.pdf",
-    "note_kr": "출입 시간: 10:00 ~ 11:00",
-    "note_en": "Entry: 10:00 ~ 11:00"
+    "file": "../attachments/transportation_tickets/20250421_arex_1.jpg",
+    "note_kr": null,
+    "note_en": null
   },
   {
-    "place": "bateaux",
-    "date": "20250417",
-    "start_time": "1815",
+    "place": "arex",
+    "date": "20250421",
+    "start_time": "1648",
+    "end_time": "1731",
     "name_kr": "황미순",
     "name_en": "Misoon Hwang",
-    "file": "../tickets/bateaux_misoon.pdf",
-    "note_kr": "디너 크루즈",
-    "note_en": "Dinner cruise"
+    "file": "../attachments/transportation_tickets/20250421_arex_2.jpg",
+    "note_kr": null,
+    "note_en": null
   },
   {
-    "place": "bateaux",
-    "date": "20250417",
-    "end_time": "2000",
-    "name_kr": "송지수",
-    "name_en": "Jisu Song",
-    "file": "../tickets/bateaux_jisu.pdf",
-    "note_kr": "출항 후 티켓 제시 필요",
-    "note_en": "Present ticket after boarding"
+    "place": "arex",
+    "date": "20250421",
+    "start_time": "1648",
+    "end_time": "1731",
+    "name_kr": "송가람",
+    "name_en": "Garam Song",
+    "file": "../attachments/transportation_tickets/20250421_arex_3.jpg",
+    "note_kr": null,
+    "note_en": null
   }
 ]
