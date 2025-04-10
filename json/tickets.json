@@ -133,9 +133,9 @@
   },
   {
     "place": "Louvre Museum",
-    "date": "20250421",
-    "start_time": "1648",
-    "end_time": "1731",
+    "date": "20250418",
+    "start_time": "0930",
+    "end_time": null,
     "name_kr": "송호인",
     "name_en": "Hoin Song",
     "file": "../attachments/activiti_tickets/Louvre-tickets_Hoin_V25078574340.pdf",
