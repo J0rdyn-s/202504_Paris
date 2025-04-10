@@ -31,7 +31,7 @@
     "note_kr": null,
     "event_en": "Louvre Museum",
     "note_en": null,
-    "ticket": "attachments/Louvre-tickets_V25078574340.pdf",
+    "ticket": "../tickets_html/ticket_Louvre-Museum.html",
     "map": "https://maps.app.goo.gl/C118zp5wK1r2rV2J8",
     "more": null
   },

@@ -31,7 +31,7 @@
     "note_kr": null,
     "event_en": "Palace of Versailles",
     "note_en": null,
-    "ticket": "attachments/2025-04_Versailles_Tickets.pdf",
+    "ticket": "../tickets_html/ticket_Palace_of_Versailles.html",
     "map": "https://maps.app.goo.gl/Gw5uDqFVFNHH3YwL6",
     "more": null
   },
@@ -55,7 +55,7 @@
     "note_kr": null,
     "event_en": "Sainte-Chapelle",
     "note_en": null,
-    "ticket": "attachments/2025-04_Sainte-Chapelle_Tickets.pdf",
+    "ticket": "../tickets_html/ticket_Sainte-Chapelle.html",
     "map": "https://maps.app.goo.gl/7ftko9s8phqkpxoX9",
     "more": null
   },

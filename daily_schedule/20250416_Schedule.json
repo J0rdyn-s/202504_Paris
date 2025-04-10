@@ -43,7 +43,7 @@
     "note_kr": null,
     "event_en": "Musée de l'Orangerie",
     "note_en": null,
-    "ticket": "attachments/Musée_de_l'Orangerie_Tickets_2506919687500400568.pdf",
+    "ticket": "../tickets_html/ticket_Musée_de_l'Orangerie.html",
     "map": "https://maps.app.goo.gl/AyDnFRmTyPkoC1Cj6",
     "more": null
   },

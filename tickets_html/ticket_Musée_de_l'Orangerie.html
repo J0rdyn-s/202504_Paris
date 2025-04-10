@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>티켓</title>
+    <link rel="stylesheet" href="../css/detail.css" />
+    <link rel="stylesheet" href="../css/menu_detail.css" />
+    <link rel="stylesheet" href="../css/ticket_detail.css" />
+
+    <script src="../js/lang-loader.js"></script>
+    <script src="../js/ticket_loader.js" defer></script>
+  </head>
+  <body>
+    <div id="ticketMeta" data-place="Musée de l'Orangerie" data-date="20250416" style="display: none"></div>
+
+    <div class="top-bar">
+      <button class="back-btn" onclick="history.back()">◀</button>
+      <div class="page-title" onclick="location.href='../index.html'" id="ticketTitle">티켓</div>
+      <div class="language-toggle">
+        <button onclick="switchLanguage()">🌐</button>
+      </div>
+    </div>
+
+    <main class="detail-content">
+      <h2 class="menu-heading" id="ticketHeader">🎟️ 티켓 목록</h2>
+      <div id="ticketList">불러오는 중...</div>
+    </main>
+  </body>
+</html>
