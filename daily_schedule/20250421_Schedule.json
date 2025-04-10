@@ -19,7 +19,7 @@
     "note_kr": "공항철도 직통 열차 탑승, 약 43분 소요 예정",
     "event_en": "🚊 Incheon Airport → Seoul Station",
     "note_en": "Approx. 43min",
-    "ticket": null,
+    "ticket": "../tickets_html/ticket_20250421_arex.html",
     "map": null,
     "more": null
   },

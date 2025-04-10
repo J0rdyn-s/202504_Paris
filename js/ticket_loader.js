@@ -1,7 +1,11 @@
 let currentLanguage = document.documentElement.lang || "kr";
 let i18n = {};
 
-document.addEventListener("DOMContentLoaded", async () => {
+window.addEventListener("load", async () => {
+  await initializePage();
+});
+
+async function initializePage() {
   const meta = document.getElementById("ticketMeta");
   const placeId = meta?.dataset.place || "";
   const dateFilter = meta?.dataset.date || "";
@@ -11,15 +15,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("ticketTitle").textContent = i18n["ticket.title"] || "티켓";
   document.getElementById("ticketHeader").textContent = `🎟️ ${i18n["ticket.list"] || "티켓 목록"}`;
 
-  try {
-    const res = await fetch("../json/tickets.json");
-    const allTickets = await res.json();
-    const filtered = allTickets.filter((t) => t.place === placeId && t.date === dateFilter);
-    renderTickets(filtered);
-  } catch (e) {
-    document.getElementById("ticketList").innerHTML = `<p>불러오기에 실패했습니다.</p>`;
-  }
-});
+  const allTickets = await fetch("../json/tickets.json").then((res) => res.json());
+  const filtered = allTickets.filter((t) => t.place === placeId && t.date === dateFilter);
+  renderTickets(filtered);
+}
 
 function renderTickets(tickets) {
   const container = document.getElementById("ticketList");
@@ -35,15 +34,11 @@ function renderTickets(tickets) {
 
     const durationValue = ticket.start_time && ticket.end_time ? calculateDuration(ticket.start_time, ticket.end_time) : "";
 
-    const durationStr = durationValue ? ` <span class="duration">(⏱️ ${durationValue}</span>)` : "";
+    const durationStr = durationValue ? ` <span class="duration">⏱️ ${durationValue}</span>` : "";
 
     let datetimeLine = `<strong>${dateStr}</strong>`;
     if (startStr || endStr) {
-      datetimeLine += " ";
-      datetimeLine += startStr || "-";
-      datetimeLine += " - ";
-      datetimeLine += endStr || "-";
-      datetimeLine += durationStr;
+      datetimeLine += ` ${startStr || "-"} - ${endStr || "-"}${durationStr}`;
     }
 
     const card = document.createElement("div");
@@ -63,9 +58,7 @@ function formatDateWithWeekday(dateStr) {
   const month = parseInt(dateStr.slice(4, 6), 10) - 1;
   const day = parseInt(dateStr.slice(6, 8), 10);
   const date = new Date(year, month, day);
-  const dayIndex = date.getDay();
-  const weekday = i18n[`weekday_${dayIndex}`] || "";
-
+  const weekday = i18n[`weekday_${date.getDay()}`] || "";
   return `${year}-${dateStr.slice(4, 6)}-${dateStr.slice(6, 8)} (${weekday})`;
 }
 
@@ -87,7 +80,7 @@ function calculateDuration(start, end) {
   const endMin = parseInt(end.slice(2, 4), 10);
 
   let durationMin = endHour * 60 + endMin - (startHour * 60 + startMin);
-  if (durationMin < 0) durationMin += 1440; // handle overnight cases
+  if (durationMin < 0) durationMin += 1440;
 
   const hours = Math.floor(durationMin / 60);
   const minutes = durationMin % 60;
@@ -106,16 +99,7 @@ function calculateDuration(start, end) {
 async function switchLanguage() {
   currentLanguage = currentLanguage === "kr" ? "en" : "kr";
   document.documentElement.lang = currentLanguage;
-  i18n = await loadProperties(currentLanguage);
-
-  const meta = document.getElementById("ticketMeta");
-  const placeId = meta?.dataset.place || "";
-  const dateFilter = meta?.dataset.date || "";
-
-  const res = await fetch("../json/tickets.json");
-  const allTickets = await res.json();
-  const filtered = allTickets.filter((t) => t.place === placeId && t.date === dateFilter);
-  renderTickets(filtered);
+  await initializePage();
 }
 
 async function loadProperties(lang = "kr") {
