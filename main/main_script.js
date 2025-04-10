@@ -1,5 +1,5 @@
 // Fetch the default language and other settings from page_meta.json
-fetch("page_meta.json")
+fetch("../json/page_meta.json")
   .then((res) => res.json())
   .then((data) => {
     const defaultLanguage = data.default_language || "en";
@@ -164,6 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.getElementById("toWishlist")?.addEventListener("click", () => {
-    window.location.href = "html/wishlist.html";
+    window.location.href = "../html/wishlist.html";
   });
 });

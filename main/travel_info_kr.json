@@ -13,15 +13,15 @@
       { "text": "지도", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
       {
         "text": "호텔 예약 서류 1 (DCNOEOOH / SNZXOIRO)",
-        "url": "attachments/DCNOEOOH_SNZXOIRO.pdf"
+        "url": "../attachments/DCNOEOOH_SNZXOIRO.pdf"
       },
       {
         "text": "호텔 예약 서류 2 (FKYZODBS)",
-        "url": "attachments/FKYZODBS.pdf"
+        "url": "../attachments/FKYZODBS.pdf"
       },
       {
         "text": "호텔 예약 서류 3 (ERFSAVIH)",
-        "url": "attachments/ERFSAVIH.pdf"
+        "url": "../attachments/ERFSAVIH.pdf"
       }
     ]
   },
@@ -39,10 +39,10 @@
       { "label": "좌석", "value": "26A, 26B, 26C, 26D" }
     ],
     "links": [
-      { "text": "E-티켓 (송호인)", "url": "attachments/E-ticket_9882487732801_(SONG_HOIN_MR).pdf" },
-      { "text": "E-티켓 (황미순)", "url": "attachments/E-ticket_9882487732798_(HWANG_MISOON_MS).pdf" },
-      { "text": "E-티켓 (송지수)", "url": "attachments/E-ticket_9882487732799_(SONG_JISU_MS).pdf" },
-      { "text": "E-티켓 (송가람)", "url": "attachments/E-ticket_9882487732800_(SONG_GARAM_MS).pdf" },
+      { "text": "E-티켓 (송호인)", "url": "../attachments/E-ticket_9882487732801_(SONG_HOIN_MR).pdf" },
+      { "text": "E-티켓 (황미순)", "url": "../attachments/E-ticket_9882487732798_(HWANG_MISOON_MS).pdf" },
+      { "text": "E-티켓 (송지수)", "url": "../attachments/E-ticket_9882487732799_(SONG_JISU_MS).pdf" },
+      { "text": "E-티켓 (송가람)", "url": "../attachments/E-ticket_9882487732800_(SONG_GARAM_MS).pdf" },
       { "text": "실시간 운항 현황", "url": "https://ko.flightaware.com/live/flight/OZ501" }
     ]
   },
@@ -86,7 +86,7 @@
       { "label": "고객센터", "value": "contact@mibankins.com 또는 02‐6925‐1517" },
       { "label": "해외여행 중 긴급연락처(24시간)", "value": "82‐2‐360‐2541" }
     ],
-    "links": [{ "text": "해외여행자보험 가입증명서", "url": "attachments/insurance.pdf" }]
+    "links": [{ "text": "해외여행자보험 가입증명서", "url": "../attachments/insurance.pdf" }]
   },
   "basic_phrases": {
     "title": "💬 기초 회화",

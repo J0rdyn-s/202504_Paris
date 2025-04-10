@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", () => {
   mobileList.style.display = "none";
 
   // Fetch and process the page meta data
-  fetch("page_meta.json")
+  fetch("json/page_meta.json")
     .then((res) => res.json())
     .then(async (data) => {
       try {

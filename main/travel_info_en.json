@@ -13,15 +13,15 @@
       { "text": "Map", "url": "https://maps.app.goo.gl/Bm4ekYosY4tLLJjy5" },
       {
         "text": "Hotel Reservation Document 1 (DCNOEOOH / SNZXOIRO)",
-        "url": "attachments/DCNOEOOH_SNZXOIRO.pdf"
+        "url": "../attachments/DCNOEOOH_SNZXOIRO.pdf"
       },
       {
         "text": "Hotel Reservation Document 2 (FKYZODBS)",
-        "url": "attachments/FKYZODBS.pdf"
+        "url": "../attachments/FKYZODBS.pdf"
       },
       {
         "text": "Hotel Reservation Document 3 (ERFSAVIH)",
-        "url": "attachments/ERFSAVIH.pdf"
+        "url": "../attachments/ERFSAVIH.pdf"
       }
     ]
   },
@@ -39,7 +39,7 @@
       { "label": "Seats", "value": "26A, 26B, 26C, 26D" }
     ],
     "links": [
-      { "text": "E-ticket", "url": "attachments/FKYZODBS_English_Check-in_Voucher_(For_Visa Application).pdf" },
+      { "text": "E-ticket", "url": "../attachments/FKYZODBS_English_Check-in_Voucher_(For_Visa Application).pdf" },
       { "text": "Live Flight Status", "url": "https://ko.flightaware.com/live/flight/OZ501" }
     ]
   },
@@ -83,7 +83,7 @@
       { "label": "Customer Service", "value": "contact@mibankins.com or 02‐6925‐1517" },
       { "label": "24-Hour Emergency Contact (Abroad)", "value": "82‐2‐360‐2541" }
     ],
-    "links": [{ "text": "Travel Insurance Certificate", "url": "additionals/insurance.pdf" }]
+    "links": [{ "text": "Travel Insurance Certificate", "url": "../attachments/insurance.pdf" }]
   },
   "basic_phrases": {
     "title": "💬 Basic Phrases",
