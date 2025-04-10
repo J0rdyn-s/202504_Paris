@@ -94,7 +94,7 @@
     "content": [
       { "label": "데이터 제공량", "value": "매일 1GB" },
       { "label": "사용 기간", "value": "9일" },
-      { "label": "고객센터", "value": "카카오톡: @와이파이도시락" }
+      { "label": "고객센터", "value": "카카오톡 @와이파이도시락" }
     ],
     "links": [
       { "text": "갤럭시 설치 방법", "url": "https://bit.ly/guide-AOS" },
