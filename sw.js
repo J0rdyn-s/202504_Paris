@@ -125,6 +125,7 @@ const urlsToCache = [
 ];
 
 self.addEventListener("install", (event) => {
+  console.log("[SW] Intercepting:", event.request.url); // ✅ Add this line
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
       for (const url of urlsToCache) {
