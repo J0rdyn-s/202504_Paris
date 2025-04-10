@@ -1,56 +1,139 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>바토 파리지앵 유람선 코스</title>
+    <title>▶️ Bateaux Parisiens Cruise Route</title>
     <link rel="stylesheet" href="../css/detail.css" />
-    <link rel="stylesheet" href="../css/menu_detail.css" />
+    <link rel="stylesheet" href="../css/cruise_route.css" />
     <script src="../js/lang-switch.js" defer></script>
   </head>
   <body>
     <div class="top-bar">
       <button class="back-btn" onclick="history.back()">◀</button>
-      <div class="page-title" OnClick="location.href ='../index.html'">바토 파리지앵 유람선</div>
+      <div class="page-title" onclick="location.href='../index.html'">Bateaux Parisiens Cruise Route</div>
       <div class="language-toggle">
         <button onclick="switchLanguage()">🌐</button>
       </div>
     </div>
 
     <main class="detail-content">
-      <h2 class="menu-heading">🚤 Bateaux Parisiens Seine Cruise Route</h2>
-
+      <h2 class="menu-heading">🚣️ Cruise Route: Bateaux Parisiens</h2>
+      <p>
+        <img src="https://www.bateauxparisiens.com/upload/photos/7971/t15.png" alt="Cruise Map" style="width: 100%; max-width: 800px" />
+      </p>
       <p>
         🔶 <strong style="color: #f97316">Orange route:</strong> Sightseeing Cruises & Dinner Cruise (6:15 pm, 9:00 pm)<br />
         ⚫ <strong>Black route:</strong> Lunch Cruise (12:45 pm), Dinner Cruise (8:30 pm), Special Cruises<br />
         <em>※ Your cruise will follow the <strong style="color: #f97316">orange route</strong> only.</em>
       </p>
 
-      <img src="https://www.bateauxparisiens.com/upload/photos/7971/t15.png" alt="Bateaux Parisiens Cruise Map" style="max-width: 100%; border-radius: 8px; margin-bottom: 24px" />
-
-      <h3>📍 Statue of Liberty (La Statue de la Liberté)</h3>
-      <p>A smaller version of the New York statue, installed for the 1889 World’s Fair in Paris.</p>
-
-      <h3>📍 Eiffel Tower (La Tour Eiffel)</h3>
-      <p>The most iconic symbol of Paris, built for the 1889 Exposition Universelle.</p>
-
-      <h3>📍 Les Invalides</h3>
-      <p>Home to Napoleon’s tomb and a major military museum complex.</p>
-
-      <h3>📍 National Assembly (L’Assemblée Nationale)</h3>
-      <p>The French Parliament’s lower house, located near the Seine.</p>
-
-      <h3>📍 Musée d'Orsay</h3>
-      <p>A former train station converted into a world-class museum of Impressionist art.</p>
-
-      <h3>📍 Institut de France</h3>
-      <p>The prestigious institution housing the Académie Française.</p>
-
-      <h3>📍 Conciergerie</h3>
-      <p>A former royal palace and prison where Marie Antoinette was held before her execution.</p>
-
-      <h3>📍 Notre-Dame Cathedral</h3>
-      <p>A Gothic masterpiece located on the Île de la Cité, overlooking the Seine.</p>
+      <ul class="landmark-list">
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>1. Eiffel Tower (La Tour Eiffel, 1889)</h3>
+            <a href="https://maps.app.goo.gl/9LM6DjwanB13RDnG7" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Eiffel Tower" class="landmark-img" />
+          <p>Built for the 1889 Paris Exposition, this iron tower named after Gustave Eiffel stands at 330 meters and is a symbol of Paris. Famous for its nighttime lights and panoramic views.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>2. Les Invalides (1676)</h3>
+            <a href="https://maps.app.goo.gl/F4gWdrXVCA4uLTmk7" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/H%C3%B4tel_des_Invalides_from_the_Eiffel_Tower%2C_23_July_2009.jpg/375px-H%C3%B4tel_des_Invalides_from_the_Eiffel_Tower%2C_23_July_2009.jpg" alt="Les Invalides" class="landmark-img" />
+          <p>Commissioned by Louis XIV as a hospital and home for wounded soldiers. It now houses military museums and Napoleon's tomb beneath its golden dome.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>3. National Assembly (L’Assemblée Nationale, 1798)</h3>
+            <a href="https://maps.app.goo.gl/iv1DK8S2kLzT95kWA" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipO2F-DKqjreeCWZsSjPuLDDJL4QA6PT_x9AndFE=w408-h311-k-no" alt="Assemblée Nationale" class="landmark-img" />
+          <p>Originally a palace for the Duke of Bourbon, this neoclassical building now hosts the French National Assembly, the lower house of parliament.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>4. Musée d'Orsay (1900)</h3>
+            <a href="https://maps.app.goo.gl/Kfkq7KwfDwj8jLfC6" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://cdn.prod.website-files.com/6409cd673ac68800ab6c2cfc/6492edaeb7fd103955502bb0_Mus%C3%A9e_d%27Orsay.webp" alt="Musée d'Orsay" class="landmark-img" />
+          <p>A former railway station transformed into a museum, showcasing Impressionist and Post-Impressionist art by Van Gogh, Monet, and Renoir.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>5. Institut de France (1688)</h3>
+            <a href="https://maps.app.goo.gl/geKJTK6zLXxsRwLW7" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipM4MflclHqrHXm9bftI86LRnrc4Pue_eGWM2P9k=w408-h248-k-no" alt="Institut de France" class="landmark-img" />
+          <p>Home of the Académie Française, this domed structure is a pillar of French language and culture, known for its classical architecture.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>6. Notre-Dame Cathedral (1163)</h3>
+            <a href="https://maps.app.goo.gl/rswu2K7XawrcuY8MA" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Notre-Dame_de_Paris_2013-07-24.jpg/280px-Notre-Dame_de_Paris_2013-07-24.jpg" alt="Notre-Dame" class="landmark-img" />
+          <p>Masterpiece of Gothic architecture famous for its rose windows and twin towers. Severely damaged by fire in 2019, it's under restoration.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>7. Paris City Hall (1882)</h3>
+            <a href="https://maps.app.goo.gl/uoyuTvkZVzdm43FP8" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX4SzkQUtcHtO5zJOHn1j3wx4PQg8oMQBuGg&s" alt="Hôtel de Ville" class="landmark-img" />
+          <p>The central seat of the Paris administration since medieval times, reconstructed in Renaissance style after a 19th-century fire.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>8. Conciergerie (14th Century)</h3>
+            <a href="https://maps.app.goo.gl/7KHXThcindTj8XUb6" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Paris_Conciergerie_265.jpg/1200px-Paris_Conciergerie_265.jpg" alt="Conciergerie" class="landmark-img" />
+          <p>Originally part of a royal palace, later used as a prison during the French Revolution, notably housing Marie Antoinette.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>9. Louvre Museum (1546 / 1793)</h3>
+            <a href="https://maps.app.goo.gl/X1JMDPfc79gQnpSZ8" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMiq8zbQz74ahZttWk6Nf_ASq3ARdE8TPLeVDof=w408-h306-k-no" alt="Louvre" class="landmark-img" />
+          <p>One of the world's largest and most visited museums, showcasing works from ancient civilizations to the 19th century. Its glass pyramid is an iconic symbol.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>10. Place de la Concorde (1772)</h3>
+            <a href="https://maps.app.goo.gl/FjqPeJupUqTytNja8" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipO7zrVC6KGVlEmazM9dYJ5mcvD-aiMOEpLWXfem=w426-h240-k-no" alt="Place de la Concorde" class="landmark-img" />
+          <p>The largest public square in Paris, once the site of royal executions during the Revolution, now home to the Luxor Obelisk.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>11. Grand Palais (1900)</h3>
+            <a href="https://maps.app.goo.gl/dcTR5rpCa2kGxi7c6" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtD_FizkITiksReObfde0bglE34QgzGC6r-w&s" alt="Grand Palais" class="landmark-img" />
+          <p>A vast glass and iron exhibition hall built for the 1900 World Fair. Hosts prestigious cultural exhibitions and events.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>12. Arc de Triomphe (1806–1836)</h3>
+            <a href="https://maps.app.goo.gl/tQioJmGTGFYixg9z5" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://lh3.googleusercontent.com/p/AF1QipMXST5GB5FJEaWKGQ2d_oBsOZhWLmXjYWhaK4M8=w408-h544-k-no" alt="Arc de Triomphe" class="landmark-img" />
+          <p>Commissioned by Napoleon to honor military victories, the arch bears the names of generals and hosts the Tomb of the Unknown Soldier.</p>
+        </li>
+        <li class="landmark-item">
+          <div class="landmark-header">
+            <h3>13. Palais de Chaillot (1937)</h3>
+            <a href="https://www.google.com/maps/place/Palais+de+Chaillot" target="_blank" class="map-link">🗺️ View on Map</a>
+          </div>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrlzAZE_Gzm-0V5W0aHUs-DYU95JyrYU5P4w&s" alt="Palais de Chaillot" class="landmark-img" />
+          <p>Built for the 1937 International Exhibition, this cultural complex offers prime views of the Eiffel Tower from Trocadéro Gardens.</p>
+        </li>
+      </ul>
     </main>
   </body>
 </html>
