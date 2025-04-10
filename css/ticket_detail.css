@@ -1,0 +1,58 @@
+/* Container for all tickets */
+.ticket-section {
+  margin-bottom: 24px;
+}
+
+/* Individual ticket card */
+.ticket-card {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.ticket-card:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Name of the person */
+.ticket-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 6px;
+}
+
+/* Date & time line */
+.ticket-meta {
+  font-size: 14px;
+  color: #4a5568;
+  margin-bottom: 6px;
+}
+
+/* Notes under the ticket */
+.ticket-note {
+  font-size: 13px;
+  color: #718096;
+  margin-bottom: 8px;
+}
+
+/* Button to view ticket */
+.ticket-button {
+  background-color: #4299e1;
+  color: white;
+  text-decoration: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ticket-button:hover {
+  background-color: #3182ce;
+}

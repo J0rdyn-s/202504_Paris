@@ -17,7 +17,7 @@ fetch("page_meta.json")
 
 // Load properties from a .properties file
 function loadProperties(language) {
-  const propertiesFile = `properties_${language}.properties`;
+  const propertiesFile = `../lang/properties_${language}.properties`;
 
   fetch(propertiesFile)
     .then((res) => res.text())

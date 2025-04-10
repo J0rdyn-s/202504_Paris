@@ -15,7 +15,7 @@ const todayStr = (() => {
 let translations = {}; // ✅ Global now
 
 async function loadLanguageProperties(lang) {
-  const response = await fetch(`properties_${lang}.properties`);
+  const response = await fetch(`../lang/properties_${lang}.properties`);
   const text = await response.text();
 
   translations = Object.fromEntries(
