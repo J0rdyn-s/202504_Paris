@@ -1,11 +1,14 @@
-let currentLanguage = document.documentElement.lang || "kr";
 let i18n = {};
+console.log("Initial document lang:", document.documentElement.lang);
 
 window.addEventListener("load", async () => {
   await initializePage();
 });
 
 async function initializePage() {
+  const htmlLang = document.documentElement.lang?.toLowerCase();
+  currentLanguage = htmlLang === "en" ? "en" : "kr"; // Always sync
+
   const meta = document.getElementById("ticketMeta");
   const placeId = meta?.dataset.place || "";
   const dateFilter = meta?.dataset.date || "";
@@ -34,7 +37,7 @@ function renderTickets(tickets) {
 
     const durationValue = ticket.start_time && ticket.end_time ? calculateDuration(ticket.start_time, ticket.end_time) : "";
 
-    const durationStr = durationValue ? ` <span class="duration">⏱️ ${durationValue}</span>` : "";
+    const durationStr = durationValue ? ` <span class="duration">(⏱️ ${durationValue})</span>` : "";
 
     let datetimeLine = `<strong>${dateStr}</strong>`;
     if (startStr || endStr) {
@@ -97,15 +100,34 @@ function calculateDuration(start, end) {
 }
 
 async function switchLanguage() {
-  currentLanguage = currentLanguage === "kr" ? "en" : "kr";
-  document.documentElement.lang = currentLanguage;
+  const htmlLang = document.documentElement.lang?.toLowerCase();
+  const newLang = htmlLang === "kr" ? "en" : "kr";
+
+  // Update both document and JS variable
+  document.documentElement.lang = newLang;
+  currentLanguage = newLang;
+
+  i18n = await loadProperties(newLang);
   await initializePage();
 }
 
+function getPropertiesFileName(lang) {
+  if (lang === "kr" || lang === "ko") return "kr";
+  if (lang === "en") return "en";
+  return "kr"; // fallback default
+}
+
 async function loadProperties(lang = "kr") {
-  const res = await fetch(`../lang/properties_${lang}.properties`);
-  const text = await res.text();
-  return parseProperties(text);
+  const fileLang = getPropertiesFileName(lang);
+  try {
+    const res = await fetch(`../lang/properties_${fileLang}.properties`);
+    if (!res.ok) throw new Error("Failed to load properties");
+    const text = await res.text();
+    return parseProperties(text);
+  } catch (err) {
+    console.error("❌ Could not load language properties:", err);
+    return {};
+  }
 }
 
 function parseProperties(text) {
