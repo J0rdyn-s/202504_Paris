@@ -92,6 +92,9 @@ const urlsToCache = [
   "/attachments/파리-전도_가로.pdf",
 
   // Attachments - activiti_tickets
+  "/attachments/2025-04_Sainte-Chapelle_Tickets.pdf",
+  "/attachments/2025-04_Versailles_Tickets.pdf",
+  "/attachments/202504_MyBankInsurance.pdf",
   "/attachments/activiti_tickets/2025-04_Versailles_Tickets_Garam.pdf",
   "/attachments/activiti_tickets/2025-04_Versailles_Tickets_Hoin.pdf",
   "/attachments/activiti_tickets/2025-04_Versailles_Tickets_Jisu.pdf",
@@ -108,6 +111,8 @@ const urlsToCache = [
   "/attachments/activiti_tickets/Louvre-tickets_Misoon_V25078574340.pdf",
   "/attachments/activiti_tickets/misoon_2025-04_Sainte-Chapelle_Tickets.pdf",
   "/attachments/activiti_tickets/misoon_Musee_de_l'Orangerie_Tickets_2506919687500400568.pdf",
+  "/attachments/Musee_de_l'Orangerie_Tickets_2506919687500400568.pdf",
+  "/tickets_html/ticket_Musee_de_l'Orangerie.html",
 
   // Attachments - ect
   "/attachments/ect/hoin_esim.PNG",
@@ -120,7 +125,19 @@ const urlsToCache = [
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(async (cache) => {
+      for (const url of urlsToCache) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) throw new Error(`Failed with status ${response.status}`);
+          await cache.put(url, response.clone());
+        } catch (err) {
+          console.warn(`[SW] Skipping ${url}: ${err.message}`);
+        }
+      }
+    })
+  );
 });
 
 self.addEventListener("fetch", (event) => {
