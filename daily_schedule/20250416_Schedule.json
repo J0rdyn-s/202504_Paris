@@ -16,7 +16,7 @@
     "start": "1000",
     "end": "1230",
     "event_kr": "오르세 미술관",
-    "note_kr": null,
+    "note_kr": "뮤지엄 패스 사용 시작 시간: 오전 9시 31분 이후",
     "event_en": "Musée d'Orsay",
     "note_en": null,
     "ticket": "../tickets_html/ticket_Musée_d'Orsay.html",
