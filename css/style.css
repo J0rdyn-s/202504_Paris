@@ -168,6 +168,14 @@ ul#mobileDateList li.today {
   background-color: #2f855a;
 }
 
+.coupon-link {
+  background-color: #d69e2e; /* golden yellow */
+}
+
+.coupon-link:hover {
+  background-color: #b7791f;
+}
+
 .map-link {
   background-color: #4299e1;
 }

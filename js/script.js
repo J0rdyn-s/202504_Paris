@@ -112,6 +112,16 @@ function loadSchedule(date) {
         const right = document.createElement("div");
         right.className = "schedule-right";
 
+        // ✅ Render coupon if present
+        if (item.coupon) {
+          const couponDiv = document.createElement("a");
+          couponDiv.href = item.coupon;
+          couponDiv.target = "_blank";
+          couponDiv.className = "schedule-button coupon-link";
+          couponDiv.textContent = translations["coupon"] || "Coupon";
+          right.appendChild(couponDiv);
+        }
+
         const langKey = currentLanguage === "kr" ? "event_kr" : "event_en";
         const noteKey = currentLanguage === "kr" ? "note_kr" : "note_en";
 

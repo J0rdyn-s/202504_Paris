@@ -152,6 +152,7 @@
     "event_en": "🚢 Bateaux Parisiens",
     "note_en": null,
     "ticket": null,
+    "coupon": "https://maps.app.goo.gl/kQ8z7mymdegJhvou6",
     "map": "https://maps.app.goo.gl/kQ8z7mymdegJhvou6",
     "more": "../more_info/cruise_bateaux_parisiens_kr.html"
   },
