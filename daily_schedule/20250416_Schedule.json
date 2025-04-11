@@ -19,7 +19,7 @@
     "note_kr": null,
     "event_en": "Musée d'Orsay",
     "note_en": null,
-    "ticket": null,
+    "ticket": "../tickets_html/ticket_Musée_d'Orsay.html",
     "map": "https://maps.app.goo.gl/1QFsZKPp6XEm2qnd6",
     "more": null
   },
