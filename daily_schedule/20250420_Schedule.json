@@ -15,6 +15,18 @@
     "type": "schedule",
     "start": null,
     "end": null,
+    "event_kr": "카르푸 시티 파리 라파예트점",
+    "note_kr": "영업 시간: 오전 9시~오후 1시",
+    "event_en": "Carrefour City Paris Lafayette",
+    "note_en": "Opening hours: 9:00 AM–1:00 PM",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/JU6BNgkpq2foNrr67",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
     "event_kr": "🍽️ 점심:",
     "note_kr": null,
     "event_en": "Lunch:",

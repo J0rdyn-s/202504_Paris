@@ -28,11 +28,23 @@
     "start": "0830",
     "end": "1300",
     "event_kr": "베르사유 궁전",
-    "note_kr": null,
+    "note_kr": "국제 운전 면허증 준비",
     "event_en": "Palace of Versailles",
     "note_en": null,
     "ticket": "../tickets_html/ticket_Palace_of_Versailles.html",
     "map": "https://maps.app.goo.gl/Gw5uDqFVFNHH3YwL6",
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": null,
+    "end": null,
+    "event_kr": "🚊 베르사유 궁전 → 화이트 부티크",
+    "note_kr": "약 1시간 20분 소요 예정",
+    "event_en": "🚊 Palace of Versailles → White Boutik",
+    "note_en": "Approx. 1 hr 20 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/7RddiqCNH2FKB6a37",
     "more": null
   },
   {

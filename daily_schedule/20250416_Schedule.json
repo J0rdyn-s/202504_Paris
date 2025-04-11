@@ -12,6 +12,18 @@
     "more": null
   },
   {
+    "type": "info",
+    "start": "0900",
+    "end": "0940",
+    "event_kr": "🚊 호텔 → 오르세 미술관",
+    "note_kr": "약 40분 소요 예정",
+    "event_en": "🚊 Hotel → Musée d'Orsay",
+    "note_en": "Approx. 40 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/K4cL2NFpKwMVBATWA",
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": "1000",
     "end": "1230",

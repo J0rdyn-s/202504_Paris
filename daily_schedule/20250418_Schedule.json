@@ -58,5 +58,17 @@
     "ticket": null,
     "map": null,
     "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
+    "event_kr": "🛒 갤러리 라파예트 오스만 옥상 야경",
+    "note_kr": null,
+    "event_en": "🛒 Galeries Lafayette Haussmann Rooftop Night View",
+    "note_en": null,
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/t5G795aMD2XfKWqF7",
+    "more": null
   }
 ]
