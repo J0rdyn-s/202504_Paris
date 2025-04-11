@@ -77,6 +77,18 @@
       }
     ]
   },
+  "card_info": {
+    "title": "💳 네이버페이 머니 카드 사용 정보",
+    "hidden": false,
+    "content": [
+      { "label": "사용 불가 시간", "value": "프랑스 현지 시간 오후 4시 45분 - 오후 5시 10분" },
+      { "label": "1회 결제 한도", "value": "200만원" },
+      { "label": "ATM 출금 한도", "value": "국내 일 30만원 / 해외 일 $300 (일 출금 횟수 2회)" },
+      { "label": "해외 수수료", "value": "결제금액 1.1% + 건당 $0.5 (환급 행사중)" },
+      { "label": "결제 방식", "value": "네이버페이 머니 부족 시 연결된 계좌에서 1만원 단위로 자동 충전 결제" }
+    ],
+    "links": [{ "text": "상세 보기", "url": "https://card.pay.naver.com/prepaid/intro" }]
+  },
   "insurance_info": {
     "title": "💊 보험 가입 내역서",
     "hidden": false,
