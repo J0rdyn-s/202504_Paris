@@ -67,7 +67,7 @@
     "note_kr": "탑승 시작: 오전 10:15</br>비행시간: 14시간 20분</br>아시아나항공 OZ501</br>좌석 26 A, B, C, D",
     "event_en": "✈️ Incheon Airport T1 → Charles de Gaulle Airport T1",
     "note_en": "Flight duration: 14 hours 20 minutes</br>Asiana Airlines OZ501</br>Seats 26 A, B, C, D",
-    "ticket": null,
+    "ticket": "../tickets_html/ticket_20250412_ICNCDG.html",
     "map": null,
     "more": "https://ko.flightaware.com/live/flight/OZ501"
   },
