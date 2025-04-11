@@ -39,6 +39,18 @@
     "type": "schedule",
     "start": null,
     "end": null,
+    "event_kr": "웨딩 드레스 수령",
+    "note_kr": null,
+    "event_en": "Pick up wedding dress",
+    "note_en": null,
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/RKjKPL4nQxd9AFUi8",
+    "more": null
+  },
+  {
+    "type": "schedule",
+    "start": null,
+    "end": null,
     "event_kr": "🍽️ 점심:",
     "note_kr": null,
     "event_en": "Lunch:",
