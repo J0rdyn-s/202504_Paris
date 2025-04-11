@@ -33,7 +33,7 @@
     "note_en": "Approx. 1 hr",
     "ticket": null,
     "map": "https://maps.app.goo.gl/g2LXj5gAKnnVXeNw7",
-    "more": null
+    "more": "null"
   },
   {
     "type": "schedule",
@@ -45,7 +45,7 @@
     "note_en": null,
     "ticket": "../tickets_html/ticket_Palace_of_Versailles.html",
     "map": "https://maps.app.goo.gl/Gw5uDqFVFNHH3YwL6",
-    "more": null
+    "more": "../more_info/versailles_info_kr.html"
   },
   {
     "type": "info",
