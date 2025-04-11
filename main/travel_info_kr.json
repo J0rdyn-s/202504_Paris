@@ -90,7 +90,7 @@
   },
   "sim_info": {
     "title": "📞 유심 설치 정보",
-    "hidden": false,
+    "hidden": true,
     "content": [
       { "label": "데이터 제공량", "value": "매일 1GB" },
       { "label": "사용 기간", "value": "9일" },
@@ -101,6 +101,21 @@
       { "text": "아이폰 설치 방법", "url": "https://bit.ly/guide-iOS" },
       { "text": "송호인(Esim)", "url": "../attachments/ect/hoin_esim.PNG" },
       { "text": "황미순(Esim)", "url": "../attachments/ect/misoon_esim.PNG" }
+    ]
+  },
+  "museum_pass": {
+    "title": "🏛️ 파리 뮤지엄패스",
+    "hidden": true,
+    "content": [
+      { "label": "사용 시작 예정", "value": "4월 16일 수요일 오전 9시 31분 이후" },
+      { "label": "사용 종료 예정", "value": "4월 18일 오전 9시 30분 까지" },
+      { "label": "사용 기간", "value": "사용 시작 시간부터 48시간" }
+    ],
+    "links": [
+      { "text": "모바일 티켓 (송호인)", "url": "../attachments/activiti_tickets/paris_museum_pass/hoin_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (황미순)", "url": "../attachments/activiti_tickets/paris_museum_pass/misoon_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (송지수)", "url": "../attachments/activiti_tickets/paris_museum_pass/jisu_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (송가람)", "url": "../attachments/activiti_tickets/paris_museum_pass/garam_paris_museum_pass.pdf" }
     ]
   },
   "basic_phrases": {
