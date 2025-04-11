@@ -14,7 +14,7 @@
   {
     "type": "schedule",
     "start": "0620",
-    "end": "0700",
+    "end": "0640",
     "event_kr": "한진택배 짐 수령",
     "note_kr": "제1여객터미널 3층 N 체크인카운터 부근</br>착불 24,000원 지불",
     "event_en": "Pick up luggage from Hanjin Express",
@@ -25,7 +25,7 @@
   },
   {
     "type": "schedule",
-    "start": "0700",
+    "start": "0640",
     "end": "0830",
     "event_kr": "공항 수속 및 짐 처리",
     "note_kr": "위탁 수하물 체크인, 출국심사, 면세품 인도",
@@ -52,7 +52,7 @@
     "start": "1045",
     "end": "1805",
     "event_kr": "✈️ 인천 공항 T1 → 샤를 드 골 공항 T1",
-    "note_kr": "비행시간: 14시간 20분</br>아시아나항공 OZ501</br>좌석 26 A, B, C, D",
+    "note_kr": "탑승 시작: 오전 10:15</br>비행시간: 14시간 20분</br>아시아나항공 OZ501</br>좌석 26 A, B, C, D",
     "event_en": "✈️ Incheon Airport T1 → Charles de Gaulle Airport T1",
     "note_en": "Flight duration: 14 hours 20 minutes</br>Asiana Airlines OZ501</br>Seats 26 A, B, C, D",
     "ticket": null,
