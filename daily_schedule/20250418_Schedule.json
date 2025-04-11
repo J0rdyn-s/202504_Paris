@@ -1,17 +1,5 @@
 ﻿[
   {
-    "type": "info",
-    "start": null,
-    "end": null,
-    "event_kr": "🚊 호텔 → 루브르 박물관",
-    "note_kr": "약 30분 소요 예정",
-    "event_en": "🚊 Hotel → Louvre Museum",
-    "note_en": "Approx. 30 min",
-    "ticket": null,
-    "map": "https://maps.app.goo.gl/mZWCN8rfdaJCemaD9",
-    "more": null
-  },
-  {
     "type": "schedule",
     "start": null,
     "end": null,
@@ -21,6 +9,30 @@
     "note_en": null,
     "ticket": null,
     "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "0740",
+    "end": "0810",
+    "event_kr": "🚊 지수: 집 → 호텔",
+    "note_kr": "약 25분 소요 예정",
+    "event_en": "🚊 Jisu: Home → Hotel",
+    "note_en": "Approx. 25 min",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
+    "start": "0820",
+    "end": "0900",
+    "event_kr": "🚊 호텔 → 루브르 박물관",
+    "note_kr": "약 30분 소요 예정",
+    "event_en": "🚊 Hotel → Louvre Museum",
+    "note_en": "Approx. 30 min",
+    "ticket": null,
+    "map": "https://maps.app.goo.gl/mZWCN8rfdaJCemaD9",
     "more": null
   },
   {

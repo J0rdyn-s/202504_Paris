@@ -1,5 +1,17 @@
 ﻿[
   {
+    "type": "info",
+    "start": "0810",
+    "end": "0840",
+    "event_kr": "🚊 지수: 집 → 호텔",
+    "note_kr": "약 25분 소요 예정",
+    "event_en": "🚊 Jisu: Home → Hotel",
+    "note_en": "Approx. 25 min",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
     "type": "schedule",
     "start": null,
     "end": null,

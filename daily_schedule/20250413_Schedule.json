@@ -1,6 +1,18 @@
 ﻿[
   {
     "type": "info",
+    "start": "0715",
+    "end": "0740",
+    "event_kr": "🚊 엘리 & 지수: 집 → 호텔",
+    "note_kr": "약 25분 소요 예정",
+    "event_en": "🚊 Eli & Jisu: Home → Hotel",
+    "note_en": "Approx. 25 min",
+    "ticket": null,
+    "map": null,
+    "more": null
+  },
+  {
+    "type": "info",
     "start": "0800",
     "end": "0850",
     "event_kr": "🚊 호텔 → 셰 알랭 먐먐 샌드위치",
