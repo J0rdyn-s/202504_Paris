@@ -148,11 +148,10 @@
     "start": "2000",
     "end": "2100",
     "event_kr": "🚢 바토 파리지앵 유람선",
-    "note_kr": null,
+    "note_kr": "매표소: 1번 출입구 위치",
     "event_en": "🚢 Bateaux Parisiens",
     "note_en": null,
-    "ticket": null,
-    "coupon": "https://maps.app.goo.gl/kQ8z7mymdegJhvou6",
+    "ticket": "../attachments/activity_tickets/Bateaux_Parisiens_tickets.pdf",
     "map": "https://maps.app.goo.gl/kQ8z7mymdegJhvou6",
     "more": "../more_info/cruise_bateaux_parisiens_kr.html"
   },

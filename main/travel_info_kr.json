@@ -124,10 +124,10 @@
       { "label": "사용 기간", "value": "사용 시작 시간부터 48시간" }
     ],
     "links": [
-      { "text": "모바일 티켓 (송호인)", "url": "../attachments/activiti_tickets/paris_museum_pass/hoin_paris_museum_pass.pdf" },
-      { "text": "모바일 티켓 (황미순)", "url": "../attachments/activiti_tickets/paris_museum_pass/misoon_paris_museum_pass.pdf" },
-      { "text": "모바일 티켓 (송지수)", "url": "../attachments/activiti_tickets/paris_museum_pass/jisu_paris_museum_pass.pdf" },
-      { "text": "모바일 티켓 (송가람)", "url": "../attachments/activiti_tickets/paris_museum_pass/garam_paris_museum_pass.pdf" }
+      { "text": "모바일 티켓 (송호인)", "url": "../attachments/activity_tickets/paris_museum_pass/hoin_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (황미순)", "url": "../attachments/activity_tickets/paris_museum_pass/misoon_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (송지수)", "url": "../attachments/activity_tickets/paris_museum_pass/jisu_paris_museum_pass.pdf" },
+      { "text": "모바일 티켓 (송가람)", "url": "../attachments/activity_tickets/paris_museum_pass/garam_paris_museum_pass.pdf" }
     ]
   },
   "basic_phrases": {
