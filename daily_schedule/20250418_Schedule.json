@@ -13,8 +13,8 @@
   },
   {
     "type": "info",
-    "start": "0820",
-    "end": "0900",
+    "start": "0750",
+    "end": "0830",
     "event_kr": "🚊 지수: 집 → 루브르 박물관",
     "note_kr": "약 40분 소요 예정",
     "event_en": "🚊 Jisu: Home → Louvre Museum",
@@ -25,8 +25,8 @@
   },
   {
     "type": "info",
-    "start": "0820",
-    "end": "0900",
+    "start": "0800",
+    "end": "0830",
     "event_kr": "🚊 호텔 → 루브르 박물관",
     "note_kr": "약 30분 소요 예정",
     "event_en": "🚊 Hotel → Louvre Museum",
@@ -40,12 +40,12 @@
     "start": "0930",
     "end": "1330",
     "event_kr": "루브르 박물관",
-    "note_kr": null,
+    "note_kr": "오디오 가이드 미리 다운로드 받기",
     "event_en": "Louvre Museum",
-    "note_en": null,
+    "note_en": "Download audio guide in advance",
     "ticket": "../tickets_html/ticket_Louvre-Museum.html",
     "map": "https://maps.app.goo.gl/C118zp5wK1r2rV2J8",
-    "more": null
+    "more": "../more_info/louvre_audio_guide_kr.html"
   },
   {
     "type": "schedule",
