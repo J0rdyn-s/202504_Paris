@@ -26,14 +26,26 @@
   {
     "type": "schedule",
     "start": "0640",
-    "end": "0830",
-    "event_kr": "공항 수속 및 짐 처리",
-    "note_kr": "위탁 수하물 체크인, 출국심사, 면세품 인도",
-    "event_en": "Airport Check-in & Baggage Process",
-    "note_en": "Checked baggage drop-off, immigration, duty-free pickup",
+    "end": "0720",
+    "event_kr": "위탁 수하물 셀프 체크인",
+    "note_kr": "인천국제공항 제1터미널 3층 C1 ~ C34</br>05:40~19:00 (항공기 출발 1시간 전까지)</br>수하물 위탁 후 주변에서 5분간 대기",
+    "event_en": "Self Checked Baggage Drop Off",
+    "note_en": "Incheon International Airport Terminal 1, 3rd Floor, C1–C34</br>05:40–19:00 (up to 1 hour before flight)</br>Wait nearby for 5 minutes after baggage drop-off",
     "ticket": null,
     "map": null,
-    "more": null
+    "more": "https://flyasiana.com/C/KR/KO/contents/self-bag-drop"
+  },
+  {
+    "type": "schedule",
+    "start": "0720",
+    "end": "0830",
+    "event_kr": "출국심사, 면세품 인도",
+    "note_kr": null,
+    "event_en": "immigration, duty-free pickup",
+    "note_en": null,
+    "ticket": null,
+    "map": null,
+    "more": "https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&ssc=tab.nx.all&query=%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD+%EC%8B%A4%EC%8B%9C%EA%B0%84+%ED%98%BC%EC%9E%A1%EB%8F%84&oquery=%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD+%ED%98%BC%EC%9E%A1%EB%8F%84&tqi=i%2FAkrwqo15VssKU3pNsssssssb4-192768"
   },
   {
     "type": "schedule",
@@ -45,7 +57,7 @@
     "note_en": null,
     "ticket": null,
     "map": null,
-    "more": null
+    "more": "https://www.airport.kr/ap_ko/1006/subview.do"
   },
   {
     "type": "info",
